@@ -2,13 +2,31 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-// Variables
-@import "variables";
-
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-material-design/scss/bootstrap-material-design.scss';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.wrapper {
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.dropdown-menu.show-right {
+  right:0 !important;
+}
+
+.jumbotron-content {
+  position: absolute;
+  top:5rem;
+  left: 3rem;
+}
+
+.jumbotron-btn {
+  position: absolute;
+  bottom: 50%;
+  margin-left: 40%;
+}
+
+.featured-products {
+  position: relative;
+  margin: 5rem 15rem;
 }
