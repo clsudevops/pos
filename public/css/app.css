@@ -19694,6 +19694,8 @@ h6 {
 
 .featured-products {
   position: relative;
-  margin: 5rem 15rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  padding-top: 3rem;
 }
 
