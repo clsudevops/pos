@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title'){{ 'WELCOME' }}@stop
+
 @section('content')
     <div class="wrapper">
         <div id="home" style="height:100vh;background-image:url('/images/banner.png');" class="jumbotron jumbotron-fluid p-5 bg-light mb-5 wrapper">
