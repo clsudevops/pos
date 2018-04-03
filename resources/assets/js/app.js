@@ -39,6 +39,6 @@ const app = new Vue({
         if(typeof window.location.hash != 'undefined'){
             this.active_hash = window.location.hash;
         }
-        
+        $(document).ready(function () { $('body').bootstrapMaterialDesign(); });
     }
 });
