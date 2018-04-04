@@ -1,6 +1,14 @@
-
+window.Vue = require('vue');
 window._ = require('lodash');
 window.Popper = require('popper.js').default;
+
+/**
+ * Adding Global Components
+ */
+
+Vue.component('sidebar', require('./components/sidebar.vue'));
+Vue.component('info-card',require('./components/admin/dashboard/infocard.vue'));
+Vue.component('sales-chart-box', require('./components/admin/dashboard/salesChartBox'));
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title'){{ 'SIGN-IN' }}@stop
+@section('title'){{ 'Sign-in' }}@stop
 
 @section('content')
 <div class="container pt-5">
