@@ -24,6 +24,9 @@
             <li class="nav-item">
                 <a v-bind:class="active_hash == '#contact-us'? 'active nav-link': 'nav-link'" href="#" @click.prevent="scrollTo('#contact-us', $event)">CONTACT US</a>
             </li>
+            <li class="nav-item">
+                <a v-bind:class="'nav-link'" href="{{ route('login') }}">SIGN-IN</a>
+            </li>
         </ul>
 
     </div>
