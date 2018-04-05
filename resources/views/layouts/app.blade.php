@@ -23,7 +23,6 @@
     <div id="app" class="wrapper" style="margin-top: 3.5rem;">
         @include('includes.navbar')
         @yield('content')
-        @include('includes.footer')
     </div>
     <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
