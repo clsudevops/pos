@@ -131,3 +131,10 @@ ul.list-notification a:hover {
   background-color: #fff;
 }
 
+.footer {
+  height: 70px;
+  padding: 3rem;
+  margin-top: 1rem;
+  color: #fff;
+}
+
