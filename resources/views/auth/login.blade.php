@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title'){{ 'Sign-in' }}@stop
+
 @section('content')
 <div class="container pt-5">
     <div class="row justify-content-center">
@@ -50,7 +52,7 @@
 
                         <div class="form-group row justify-content-center">
                             <div class="col-12">
-                                <button type="submit" class="btn btn-raised btn-success btn-block">
+                                <button type="submit" class="btn btn-raised btn-primary btn-block">
                                 {{ __('Login') }}
                             </button>
                             </div>

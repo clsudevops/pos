@@ -1,35 +1,136 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Bootstrap
 // @import "~bootstrap/scss/bootstrap";
-// @import '~bootstrap-material-design/scss/bootstrap-material-design.scss';
+// @import '~bootstrap-material-design/scss/bootstrap-material-design';
+body {
+	background-color: #f3f3f3 !important;
+}
+
+.navbar {
+	z-index: 1000 !important;
+}
 
 .wrapper {
-  position: relative;
-  flex-wrap: wrap;
+	position: relative;
+	flex-wrap: wrap;
 }
 
 .dropdown-menu.show-right {
-  right:0 !important;
+	right: 0 !important;
 }
 
 .jumbotron-content {
-  position: absolute;
-  top:5rem;
-  left: 3rem;
+	position: absolute;
+	top: 5rem;
+	left: 3rem;
 }
 
 .jumbotron-btn {
-  position: absolute;
-  bottom: 50%;
-  margin-left: 40%;
+	position: absolute;
+	bottom: 50%;
+	margin-left: 40%;
 }
 
 .featured-products {
-  position: relative;
-  margin-left: 15rem;
-  margin-right: 15rem;
-  padding-top: 3rem;
+	position: relative;
+	margin-left: 15rem;
+	margin-right: 15rem;
+	padding-top: 3rem;
+}
+
+.aside-left {
+	margin-left: 13rem
+}
+
+.sidebar {
+	border-right: 1px solid #e2e2e2;
+	position: fixed;
+	width: 214px;
+	top: 0;
+	left: 0;
+	padding-top: 85px;
+	min-height: 100%;
+	z-index: 900;
+	max-height: 100%;
+	overflow-y: auto;
+	background-color: #fff;
+}
+
+ul.sidebar-nav {
+	list-style: none;
+	padding: 0;
+}
+
+ul.sidebar-nav>li {
+	position: relative;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}
+
+ul.sidebar-nav>li>a {
+	padding: 0.5rem 0.5rem 0.5rem 2rem;
+	word-wrap: break-word;
+	display: block;
+	text-decoration: none;
+	border-top: 1px solid #f1f1f1;
+	border-bottom: 1px solid #f1f1f1;
+	margin-bottom: 2px;
+	font-size: 12px !important;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+}
+
+ul.list-notification {
+	list-style: none;
+	padding-left: 0 !important;
+}
+
+ul.list-notification>li {
+	text-align: center !important;
+	position: relative;
+}
+
+ul.list-notification > li > a {
+	padding: 0.5rem 0.5rem;
+	font-size: 14px;
+}
+
+ul.sidebar-nav>li>a:hover,
+ul.list-notification>li>a:hover {
+	background-color: #009688;
+	color: #fafafa;
+}
+
+.dropdown-menu.dropdown-navbar {
+	right: 0;
+	left: auto !important;
+}
+
+.list-notification > li > a{
+	margin-right: 0!important;
+	display: block;
+}
+
+ul.list-notification a:hover {
+	text-decoration: none;
+}
+
+.badge-notif {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.dropdown-toggle::after {
+	display: none;
+}
+
+.cards-box {
+	margin-bottom: 1rem;
+}
+
+.chart-box {
+	background-color: #fff;
 }

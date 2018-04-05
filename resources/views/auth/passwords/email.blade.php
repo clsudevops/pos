@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title'){{ 'Email Confirmation' }}@stop
+
 @section('content')
 <div class="container pt-5">
     <div class="row justify-content-center">

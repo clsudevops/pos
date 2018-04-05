@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title'){{ 'Reset Passoword' }}@stop
 @section('content')
 <div class="container pt-5">
     <div class="row justify-content-center">
