@@ -142,3 +142,7 @@ ul.list-notification a:hover {
   color: #fff;
 }
 
+.table td {
+  vertical-align: middle !important;
+}
+

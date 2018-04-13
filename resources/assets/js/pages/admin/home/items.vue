@@ -1,18 +1,13 @@
 <template>
     <div>
-        <!-- <div class="row mb-5 bg-light">
-            <div class="col-md-8">
-                
-            </div>
-            <div class="col-md-4"></div>
-        </div> -->
+        
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header clearfix">
                         <div class="form-inline float-left">
                             <div class="form-group pt-0 mr-2">
-                                <input style="width:250px" type="text" id="searchItemsField" class="form-control" placeholder="Search Items">
+                                <input style="width:250px; margin-top: 0.4rem;" type="text" id="searchItemsField" class="form-control" placeholder="Search Items">
                             </div>
                             <div class="form-group pt-0 mr-2">
                                 <v-select v-model="selected" placeholder="Filter by Category" label="label" :options="options"></v-select>
@@ -99,5 +94,9 @@ export default {
 </script>
 
 <style>
-
+    .v-select.searchable .dropdown-toggle {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
 </style>
