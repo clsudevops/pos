@@ -2,6 +2,10 @@
   background-color: #f3f3f3 !important;
 }
 
+.v-select .dropdown-toggle {
+  border-radius: 0 !important;
+}
+
 .navbar {
   z-index: 1000 !important;
 }
@@ -35,8 +39,9 @@
   padding-top: 3rem;
 }
 
-.aside-left {
+.main-content {
   margin-left: 13rem;
+  margin-top: 4rem;
 }
 
 .sidebar {
@@ -129,5 +134,22 @@ ul.list-notification a:hover {
 
 .chart-box {
   background-color: #fff;
+}
+
+.footer {
+  height: 70px;
+  padding: 3rem;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.table td {
+  vertical-align: middle !important;
+}
+
+.dropdown-menu {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 

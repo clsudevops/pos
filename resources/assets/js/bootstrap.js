@@ -1,7 +1,10 @@
 window.Vue = require('vue');
 window._ = require('lodash');
 window.Popper = require('popper.js').default;
+import VueRouter from 'vue-router';
+import VSelect from 'vue-select';
 
+Vue.use(VueRouter);
 /**
  * Adding Global Components
  */
@@ -9,7 +12,7 @@ window.Popper = require('popper.js').default;
 Vue.component('sidebar', require('./components/sidebar.vue'));
 Vue.component('info-card',require('./components/admin/dashboard/infocard.vue'));
 Vue.component('sales-chart-box', require('./components/admin/dashboard/salesChartBox'));
-
+Vue.component('v-select', VSelect);
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
