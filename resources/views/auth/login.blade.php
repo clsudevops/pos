@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container pt-5">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-5">
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header"><h4>{{ __('Login') }}</h4></div>
