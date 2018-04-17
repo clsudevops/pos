@@ -24,7 +24,7 @@ class SuppliersController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.suppliers.create');
     }
 
     /**
@@ -57,7 +57,8 @@ class SuppliersController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('pages.admin.suppliers.create');
+
     }
 
     /**

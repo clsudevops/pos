@@ -2,7 +2,7 @@
   
     <div class="sidebar">
         <ul class="sidebar-nav">
-            <li><a href="/admin"> <i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard </a></li>
+            <li><a href="/admin/dashboard"> <i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard </a></li>
             <li><a href="/admin/customers"> <i class="fas fa-users"></i>&nbsp;Customers </a></li>
             <li><a href="/admin/items"> <i class="fas fa-cube"></i>&nbsp;Items </a></li>
             <li><a href="/admin/transactions"> <i class="ion ion-clipboard"></i>&nbsp;Transactions </a></li>

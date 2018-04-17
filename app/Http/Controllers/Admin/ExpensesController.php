@@ -24,7 +24,7 @@ class ExpensesController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.expenses.create');
     }
 
     /**
@@ -57,7 +57,8 @@ class ExpensesController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('pages.admin.expenses.create');
+
     }
 
     /**

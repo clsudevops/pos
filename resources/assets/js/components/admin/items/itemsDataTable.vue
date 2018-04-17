@@ -13,7 +13,7 @@
                             </div>
 
                             <div class="form-group">
-                                <button class="btn btn-info btn-raised mb-0">
+                                <button class="btn btn-success btn-raised mb-0">
                                     <i class="fas fa-search"></i>
                                     Search
                                 </button>
@@ -23,9 +23,9 @@
 
                         <div class="form-inline float-right">
                             <div class="form-group mr-1">
-                                <button class="btn btn-primary btn-raised mb-0">
+                                <a href="/admin/items/create" class="btn btn-primary btn-raised mb-0">
                                     <i class="fas fa-plus-circle"></i> New Item
-                                </button>
+                                </a>
                             </div>
                             <div class="form-group">
 
@@ -54,9 +54,7 @@
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="checkbox">
-                                                    <span class="checkbox-decorator">
-                                                        <span class="check"></span>
-                                                    </span>
+                                                    <span class="check"></span>
                                                 </label>
                                             </div>
                                         </th>
@@ -77,9 +75,7 @@
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="checkbox">
-                                                    <span class="checkbox-decorator">
-                                                        <span class="check"></span>
-                                                    </span>
+                                                    <span class="check"></span>
                                                 </label>
                                             </div>
                                         </td>
@@ -106,9 +102,7 @@
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="checkbox">
-                                                    <span class="checkbox-decorator">
-                                                        <span class="check"></span>
-                                                    </span>
+                                                    <span class="check"></span>
                                                 </label>
                                             </div>
                                         </td>
@@ -136,6 +130,7 @@
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="checkbox">
+                                                    <span class="check"></span>
                                                 </label>
                                             </div>
                                         </td>

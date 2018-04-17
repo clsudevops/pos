@@ -1,4 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);body {
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);.bg-primary {
+  background-color: #0f796f !important;
+}
+
+body {
   background-color: #f3f3f3 !important;
 }
 
@@ -100,7 +104,7 @@ ul.list-notification > li > a {
 
 ul.sidebar-nav > li > a:hover,
 ul.list-notification > li > a:hover {
-  background-color: #009688;
+  background-color: #0f796f;
   color: #fafafa;
 }
 
@@ -151,5 +155,27 @@ ul.list-notification a:hover {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.v-select.searchable .dropdown-toggle {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.v-select .dropdown-menu {
+  border-top: 1px solid;
+}
+
+.custom-select {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.custom-select:focus {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26) !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 

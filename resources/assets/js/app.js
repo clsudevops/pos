@@ -19,7 +19,12 @@ const app = new Vue({
             
             this.active_hash = hash;
         },
-        
+        openFile(element) {
+            document.getElementById(element).click();
+        },
+        setInputFile(element) {
+            document.getElementById('inputFile').value = document.getElementById(element).files[0].name
+        }
     },
     created() {
         if(typeof window.location.hash != 'undefined'){

@@ -24,7 +24,7 @@ class CustomersController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.customers.create');
     }
 
     /**
@@ -57,7 +57,7 @@ class CustomersController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('pages.admin.customers.create');
     }
 
     /**

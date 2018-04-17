@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-info btn-raised mb-0">
+                    <button class="btn btn-success btn-raised mb-0">
                         <i class="fas fa-search"></i>
                         Search
                     </button>

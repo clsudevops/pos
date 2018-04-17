@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('items', 'Admin\ItemsController')->only([
             'index','show','create','edit'
         ]);
-        Route::resource('transaction', 'Admin\TransactionsController')->only([
+        Route::resource('transactions', 'Admin\TransactionsController')->only([
             'index','show','create','edit'
         ]);
         Route::resource('prices-rules', 'Admin\PriceController')->only([

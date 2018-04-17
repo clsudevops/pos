@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-info btn-raised mb-0">
+                    <button class="btn btn-success btn-raised mb-0">
                         <i class="fas fa-search"></i>
                         Search
                     </button>
@@ -26,9 +26,9 @@
 
             <div class="form-inline float-right">
                 <div class="form-group mr-1">
-                    <router-link to="/expenses/create" class="btn btn-primary btn-raised mb-0">
+                    <a href="/admin/expenses/create" class="btn btn-primary btn-raised mb-0">
                         <i class="fas fa-plus-circle"></i> New Expense
-                    </router-link>
+                    </a>
                 </div>
                 <div class="form-group">
 

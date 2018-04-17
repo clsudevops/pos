@@ -13,7 +13,7 @@
                             </div>
 
                             <div class="form-group">
-                                <button class="btn btn-info btn-raised mb-0">
+                                <button class="btn btn-success btn-raised mb-0">
                                     <i class="fas fa-search"></i>
                                     Search
                                 </button>
@@ -23,9 +23,9 @@
 
                         <div class="form-inline float-right">
                             <div class="form-group mr-1">
-                                <button class="btn btn-primary btn-raised mb-0">
+                                <a href="/admin/customers/create" class="btn btn-primary btn-raised mb-0">
                                     <i class="fas fa-plus-circle"></i> New Customer
-                                </button>
+                                </a>
                             </div>
                             <div class="form-group">
 
@@ -164,9 +164,5 @@
 </script>
 
 <style>
-    .v-select.searchable .dropdown-toggle {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-    }
+    
 </style>

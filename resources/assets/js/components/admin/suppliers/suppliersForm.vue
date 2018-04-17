@@ -4,7 +4,7 @@
             <div class="float-left">
                 <legend >Supplier Information</legend>
             </div>
-            <a to="/admin/suppliers" class="btn btn-raised btn-primary float-right">
+            <a href="/admin/suppliers" class="btn btn-raised btn-primary float-right">
                 <i class="fas fa-arrow-left"></i>&nbsp;Back to Suppliers
             </a>
         </div>
@@ -49,9 +49,15 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <label for="exampleInputFile" class="bmd-label-floating">Upload Image</label>
-                        <input type="file" class="form-control-file" id="exampleInputFile">
-                        <!-- <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small> -->
+                         <div class="form-group">
+                            <div class="input-group-prepend">
+                                <button @click.prevent="$root.openFile('supplierAvatar')" class="mb-0 btn btn-raised btn-primary">
+                                    <i class="fas fa-folder-open"></i>&nbsp;Choose File
+                                </button>
+                                <input  type="text" id="inputFile" class="form-control ml-1" disabled>
+                            </div>
+                            <input @change="$root.setInputFile('supplierAvatar')" type="file" accept="image/*" style="display:none;" id="supplierAvatar">
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">

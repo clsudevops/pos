@@ -4,9 +4,9 @@
             <div class="float-left">
                 <legend >New Expense</legend>
             </div>
-            <router-link to="/expenses" class="btn btn-raised btn-primary float-right">
+            <a href="/admin/expenses" class="btn btn-raised btn-primary float-right">
                 <i class="fas fa-arrow-left"></i>&nbsp;Back to Expenses
-            </router-link>
+            </a>
         </div>
         <div class="card-body">
             <form action="">

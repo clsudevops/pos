@@ -10,7 +10,6 @@
         </div>
         <div class="card-body">
             <form action="">
-
                 <h5>Basic Information</h5>
                 <hr class="my-1">
 
@@ -61,8 +60,16 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <label for="userImage" class="bmd-label-floating">Upload Image</label>
-                        <input type="file" class="form-control-file" id="userImage">
+                        
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <button @click.prevent="$root.openFile('employeeAvatar')" class="mb-0 btn btn-raised btn-primary">
+                                    <i class="fas fa-folder-open"></i>&nbsp;Choose File
+                                </button>
+                                <input  type="text" id="inputFile" class="form-control ml-1" disabled>
+                            </div>
+                            <input @change="$root.setInputFile('employeeAvatar')" type="file" accept="image/*" style="display:none;" id="employeeAvatar">
+                        </div>
                         <!-- <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small> -->
                     </div>
                     <div class="col-md-12">
