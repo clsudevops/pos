@@ -14,10 +14,26 @@ Vue.component('info-card',require('./components/admin/dashboard/infocard.vue'));
 Vue.component('sales-chart-box', require('./components/admin/dashboard/salesChartBox'));
 Vue.component('v-select', VSelect);
 /**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
+ * ADMIN 
  */
+Vue.component('dashboard', require('./pages/admin/dashboard.vue'));
+Vue.component('customers-data-table', require('./components/admin/customers/customersDataTable.vue'));
+Vue.component('customer-form', require('./components/admin/customers/customerForm.vue'));
+Vue.component('items-data-table', require('./components/admin/items/itemsDataTable.vue'));
+Vue.component('item-form', require('./components/admin/items/itemForm.vue'));
+Vue.component('transactions-data-table', require('./components/admin/transactions/transactionsDataTable.vue'));
+Vue.component('price-rules-data-table', require('./components/admin/prices/priceRulesDataTable.vue'));
+Vue.component('price-form', require('./components/admin/prices/priceForm.vue'));
+Vue.component('suppliers-data-table', require('./components/admin/suppliers/suppliersDataTable.vue'));
+Vue.component('supplier-form', require('./components/admin/suppliers/suppliersForm.vue'));
+Vue.component('sales-data-table', require('./components/admin/sales/salesDataTable.vue'));
+Vue.component('sales-form', require('./components/admin/sales/salesForm.vue'));
+Vue.component('expenses-data-table', require('./components/admin/expenses/expensesDataTable.vue'));
+Vue.component('expense-form', require('./components/admin/expenses/expensesForm.vue'));
+Vue.component('employees-data-table', require('./components/admin/employees/employeesDataTable.vue'));
+Vue.component('employee-form', require('./components/admin/employees/employeeForm.vue'));
+Vue.component('stores-data-table', require('./components/admin/stores/storesDataTable.vue'))
+Vue.component('store-form', require('./components/admin/stores/storeForm.vue'));
 
 try {
     window.$ = window.jQuery = require('jquery');

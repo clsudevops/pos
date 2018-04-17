@@ -23,7 +23,9 @@
 <body>
     <div id="app" class="wrapper">
         @include('includes.navbar')
-        @yield('content')
+        
+            @yield('content')
+        
     </div>
     <script src="{{ asset('js/app.js') }}" defer></script>
 </body>

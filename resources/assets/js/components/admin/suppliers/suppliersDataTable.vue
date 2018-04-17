@@ -26,9 +26,9 @@
 
             <div class="form-inline float-right">
                 <div class="form-group mr-1">
-                    <router-link to="/suppliers/create" class="btn btn-primary btn-raised mb-0">
+                    <a href="/admin/suppliers/create" class="btn btn-primary btn-raised mb-0">
                         <i class="fas fa-plus-circle"></i> New Supplier
-                    </router-link>
+                    </a>
                 </div>
                 <div class="form-group">
 

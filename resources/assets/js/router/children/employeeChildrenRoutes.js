@@ -11,5 +11,4 @@ export default [
         path: 'edit',
         component: require('../../components/admin/employees/employeeForm')
     }
-
 ];

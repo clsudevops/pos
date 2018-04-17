@@ -1,12 +1,10 @@
 require('./bootstrap');
 
 import store from './store/store';
-import router from './router/routes'; 
 
 const app = new Vue({
     el: '#app',
     store,
-    router:router,
     data: {
         active_hash: null,
     },
@@ -28,7 +26,5 @@ const app = new Vue({
             this.active_hash = window.location.hash;
         }
         $(document).ready(function () { $('body').bootstrapMaterialDesign(); });
-
-        console.log(this.$route)
     }
 });

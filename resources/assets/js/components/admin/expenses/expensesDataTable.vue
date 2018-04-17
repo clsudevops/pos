@@ -3,7 +3,7 @@
         <div class="card-header clearfix">
             <div class="form-inline float-left">
                 <div class="form-group pt-0 mr-2">
-                    <input style="width:250px; margin-top: 0.4rem;" type="text" id="searchItemsField" class="form-control" placeholder="Search Employees">
+                    <input style="width:250px; margin-top: 0.4rem;" type="text" id="searchItemsField" class="form-control" placeholder="Search Expenses">
                 </div>
                 <div class="form-group pt-0 mr-2">
                     <v-select v-model="selected" placeholder="Filter by Category" label="label" :options="options"></v-select>
@@ -26,9 +26,9 @@
 
             <div class="form-inline float-right">
                 <div class="form-group mr-1">
-                    <a href="/admin/employees/create" class="btn btn-primary btn-raised mb-0">
-                        <i class="fas fa-plus-circle"></i> New Employee
-                    </a>
+                    <router-link to="/expenses/create" class="btn btn-primary btn-raised mb-0">
+                        <i class="fas fa-plus-circle"></i> New Expense
+                    </router-link>
                 </div>
                 <div class="form-group">
 
@@ -39,14 +39,7 @@
                     </button>
                     <div class="dropdown-menu" style="top">
                         <a class="dropdown-item" href="#">
-                            <i class="fas fa-upload"></i>&nbsp;Excel Import</a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fas fa-download"></i>&nbsp;Excel Export</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">
-                            <i class="fas fa-times-circle"></i>&nbsp;Cleanup old Suppliers</a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fas fa-trash-alt"></i> &nbsp;Manage Deleted Suppliers</a>
+                            <i class="fas fa-upload"></i>&nbsp;Manage Deleted Expense</a>
                     </div>
 
                 </div>
@@ -60,17 +53,22 @@
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox">
-                                    <span class="check"></span>
+                                    <span class="checkbox-decorator">
+                                        <span class="check"></span>
+                                    </span>
                                 </label>
                             </div>
                         </th>
                         <th scope="col" style="width:100px;">Action</th>
-                        <th scope="col">Person ID</th>
-                        <th scope="col">Last Name</th>
-                        <th>First Name</th>
-                        <th>Email</th>
-                        <th>Phone Number</th>
-                        <th></th>
+                        <th>Id</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Description</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Tax</th>
+                        <th>Recipient</th>
+                        <th>Approved By</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -79,7 +77,9 @@
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox">
-                                    <span class="check"></span>
+                                    <span class="checkbox-decorator">
+                                        <span class="check"></span>
+                                    </span>
                                 </label>
                             </div>
                         </td>
@@ -89,13 +89,14 @@
                             </button>
                         </td>
                         <td>1233</td>
-                        <td>Simon</td>
-                        <td>John</td>
-                        <td>john.simon@gmail.com</td>
-                        <td>0912331423423</td>
-                        <td>
-                            <img src="/images/supplier_avatar.png" alt="" height="45" width="50">
-                        </td>
+                        <td>Gas Expense</td>
+                        <td>Lorem ipsum</td>
+                        <td>Sample Category Expense</td>
+                        <td>April 15, 2018</td>
+                        <td>₱2000.00</td>
+                        <td>₱150.00</td>
+                        <td>Doe, John</td>
+                        <td>Babbage, Charles</td>
                     </tr>
                 </tbody>
             </table>

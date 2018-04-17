@@ -2,6 +2,7 @@
 import VueRouter from 'vue-router';
 import supplierChildrenRoutes from './children/supplierChildrenRoutes';
 import employeeChildrenRoutes from './children/employeeChildrenRoutes';
+import expensesChildrenRoutes from './children/expensesChildrenRoutes';
 
 let routes = [
     {
@@ -33,6 +34,11 @@ let routes = [
         path: '/employees',
         component: require('../pages/admin/home/employees'),
         children: employeeChildrenRoutes
+    },
+    {
+        path: '/expenses',
+        component: require('../pages/admin/home/expenses'),
+        children: expensesChildrenRoutes
     }
 ];
 
