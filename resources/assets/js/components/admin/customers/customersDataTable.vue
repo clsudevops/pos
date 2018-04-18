@@ -35,11 +35,15 @@
                                     <i class="fas fa-ellipsis-v"></i>
                                 </button>
                                 <div class="dropdown-menu" style="top">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-upload"></i>&nbsp;Excel Import</a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-download"></i>&nbsp;Excel Export</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Separated link</a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-times-circle"></i>&nbsp;Cleanup old Customers</a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-trash-alt"></i> &nbsp;Manage Deleted Customers</a>
                                 </div>
 
                             </div>

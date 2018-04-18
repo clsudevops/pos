@@ -1,7 +1,9 @@
 
 <nav id="navbar-pos-home" class="navbar navbar-expand fixed-top navbar-dark bg-primary">
     
-    <a class="navbar-brand pl-5" href="#">POS</a>
+    <a class="navbar-brand pl-5" href="#">
+        <img src="/images/favicon.png" heght="40" width="40" alt="POS" class="img-circle">
+        POS</a>
       
         <div class="navbar-nav mr-auto"></div>
         <ul class="navbar-home navbar-nav my-2 my-lg-0">
