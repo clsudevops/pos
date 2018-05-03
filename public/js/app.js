@@ -64311,7 +64311,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+    created: function created() {},
+
+    methods: {
+        isActiveLink: function isActiveLink(link) {
+            var path = window.location.pathname;
+
+            if (link == path) {
+                return "active";
+            }
+        }
+    }
+});
 
 /***/ }),
 /* 166 */
@@ -64321,109 +64333,169 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "sidebar" }, [
-      _c("ul", { staticClass: "sidebar-nav" }, [
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/dashboard" } }, [
+  return _c("div", { staticClass: "sidebar" }, [
+    _c("ul", { staticClass: "sidebar-nav" }, [
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/dashboard"),
+            attrs: { href: "/admin/dashboard" }
+          },
+          [
             _c("i", { staticClass: "fas fa-tachometer-alt" }),
             _vm._v(" Dashboard ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/customers" } }, [
-            _c("i", { staticClass: "fas fa-users" }),
-            _vm._v(" Customers ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/items" } }, [
-            _c("i", { staticClass: "fas fa-cube" }),
-            _vm._v(" Items ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/transactions" } }, [
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/customers"),
+            attrs: { href: "/admin/customers" }
+          },
+          [_c("i", { staticClass: "fas fa-users" }), _vm._v(" Customers ")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/items"),
+            attrs: { href: "/admin/items" }
+          },
+          [_c("i", { staticClass: "fas fa-cube" }), _vm._v(" Items ")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/transactions"),
+            attrs: { href: "/admin/transactions" }
+          },
+          [
             _c("i", { staticClass: "ion ion-clipboard" }),
             _vm._v(" Transactions ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/price-rules" } }, [
-            _c("i", { staticClass: "fas fa-tags" }),
-            _vm._v(" Price Rules ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/suppliers" } }, [
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/price-rules"),
+            attrs: { href: "/admin/price-rules" }
+          },
+          [_c("i", { staticClass: "fas fa-tags" }), _vm._v(" Price Rules ")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/suppliers"),
+            attrs: { href: "/admin/suppliers" }
+          },
+          [
             _c("i", { staticClass: "fas fa-dolly-flatbed" }),
             _vm._v(" Suppliers ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/reports" } }, [
-            _c("i", { staticClass: "fas fa-chart-line" }),
-            _vm._v(" Reports ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/sales" } }, [
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/reports"),
+            attrs: { href: "/admin/reports" }
+          },
+          [_c("i", { staticClass: "fas fa-chart-line" }), _vm._v(" Reports ")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/sales"),
+            attrs: { href: "/admin/sales" }
+          },
+          [
             _c("i", { staticClass: "fas fa-hand-holding-usd" }),
             _vm._v(" Sales ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/expenses" } }, [
-            _c("i", { staticClass: "fas fa-dollar-sign" }),
-            _vm._v(" Expenses ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/employees" } }, [
-            _c("i", { staticClass: "fas fa-users" }),
-            _vm._v(" Employees")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/store" } }, [
-            _c("i", { staticClass: "fas fa-cogs" }),
-            _vm._v(" Store Config ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/locations" } }, [
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/expenses"),
+            attrs: { href: "/admin/expenses" }
+          },
+          [_c("i", { staticClass: "fas fa-dollar-sign" }), _vm._v(" Expenses ")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/employees"),
+            attrs: { href: "/admin/employees" }
+          },
+          [_c("i", { staticClass: "fas fa-users" }), _vm._v(" Employees")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/store"),
+            attrs: { href: "/admin/store" }
+          },
+          [_c("i", { staticClass: "fas fa-cogs" }), _vm._v(" Store Config ")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/locations"),
+            attrs: { href: "/admin/locations" }
+          },
+          [
             _c("i", { staticClass: "fas fa-map-marker-alt" }),
             _vm._v(" Locations ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/admin/gift-cards" } }, [
-            _c("i", { staticClass: "fas fa-gift" }),
-            _vm._v(" Gift Cards ")
-          ])
-        ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            class: _vm.isActiveLink("/admin/gift-cards"),
+            attrs: { href: "/admin/gift-cards" }
+          },
+          [_c("i", { staticClass: "fas fa-gift" }), _vm._v(" Gift Cards ")]
+        )
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

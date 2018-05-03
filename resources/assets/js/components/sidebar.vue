@@ -2,19 +2,19 @@
   
     <div class="sidebar">
         <ul class="sidebar-nav">
-            <li><a href="/admin/dashboard"> <i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard </a></li>
-            <li><a href="/admin/customers"> <i class="fas fa-users"></i>&nbsp;Customers </a></li>
-            <li><a href="/admin/items"> <i class="fas fa-cube"></i>&nbsp;Items </a></li>
-            <li><a href="/admin/transactions"> <i class="ion ion-clipboard"></i>&nbsp;Transactions </a></li>
-            <li><a href="/admin/price-rules"> <i class="fas fa-tags"></i>&nbsp;Price Rules </a></li>
-            <li><a href="/admin/suppliers"> <i class="fas fa-dolly-flatbed"></i>&nbsp;Suppliers </a></li>
-            <li><a href="/admin/reports"> <i class="fas fa-chart-line"></i>&nbsp;Reports </a></li>
-            <li><a href="/admin/sales"> <i class="fas fa-hand-holding-usd"></i>&nbsp;Sales </a></li>
-            <li><a href="/admin/expenses"> <i class="fas fa-dollar-sign"></i>&nbsp;Expenses </a></li>
-            <li><a href="/admin/employees"> <i class="fas fa-users"></i>&nbsp;Employees</a>  </li>
-            <li><a href="/admin/store"> <i class="fas fa-cogs"></i>&nbsp;Store Config </a></li>
-            <li><a href="/admin/locations"> <i class="fas fa-map-marker-alt"></i>&nbsp;Locations </a></li>
-            <li><a href="/admin/gift-cards"><i class="fas fa-gift"></i>&nbsp;Gift Cards </a></li>
+            <li><a :class="isActiveLink('/admin/dashboard')" href="/admin/dashboard"> <i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard </a></li>
+            <li><a :class="isActiveLink('/admin/customers')" href="/admin/customers"> <i class="fas fa-users"></i>&nbsp;Customers </a></li>
+            <li><a :class="isActiveLink('/admin/items')" href="/admin/items"> <i class="fas fa-cube"></i>&nbsp;Items </a></li>
+            <li><a :class="isActiveLink('/admin/transactions')" href="/admin/transactions"> <i class="ion ion-clipboard"></i>&nbsp;Transactions </a></li>
+            <li><a :class="isActiveLink('/admin/price-rules')" href="/admin/price-rules"> <i class="fas fa-tags"></i>&nbsp;Price Rules </a></li>
+            <li><a :class="isActiveLink('/admin/suppliers')" href="/admin/suppliers"> <i class="fas fa-dolly-flatbed"></i>&nbsp;Suppliers </a></li>
+            <li><a :class="isActiveLink('/admin/reports')" href="/admin/reports"> <i class="fas fa-chart-line"></i>&nbsp;Reports </a></li>
+            <li><a :class="isActiveLink('/admin/sales')" href="/admin/sales"> <i class="fas fa-hand-holding-usd"></i>&nbsp;Sales </a></li>
+            <li><a :class="isActiveLink('/admin/expenses')" href="/admin/expenses"> <i class="fas fa-dollar-sign"></i>&nbsp;Expenses </a></li>
+            <li><a :class="isActiveLink('/admin/employees')" href="/admin/employees"> <i class="fas fa-users"></i>&nbsp;Employees</a>  </li>
+            <li><a :class="isActiveLink('/admin/store')" href="/admin/store"> <i class="fas fa-cogs"></i>&nbsp;Store Config </a></li>
+            <li><a :class="isActiveLink('/admin/locations')" href="/admin/locations"> <i class="fas fa-map-marker-alt"></i>&nbsp;Locations </a></li>
+            <li><a :class="isActiveLink('/admin/gift-cards')" href="/admin/gift-cards"><i class="fas fa-gift"></i>&nbsp;Gift Cards </a></li>
             <!-- <li><router-link to="/dashboard"> <i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard </router-link></li>
             <li><router-link to="/customers"> <i class="fas fa-users"></i>&nbsp;Customers </router-link></li>
             <li><router-link to="/items"> <i class="fas fa-cube"></i>&nbsp;Items </router-link></li>
@@ -35,7 +35,19 @@
 
 <script>
     export default {
-
+        created() {
+            
+        },
+        methods: {
+            isActiveLink(link) {
+                let path = window.location.pathname;
+                
+                if(link == path){
+                    return "active";
+                }
+                
+            }
+        }
     }
 </script>
 
