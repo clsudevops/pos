@@ -103,7 +103,8 @@ ul.list-notification > li > a {
 }
 
 ul.sidebar-nav > li > a:hover,
-ul.list-notification > li > a:hover {
+ul.list-notification > li > a:hover,
+ul.sidebar-nav > li > a.active {
   background-color: #0f796f;
   color: #fafafa;
 }

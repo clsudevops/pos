@@ -28,8 +28,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin/home/#/dashboard';
-
+    // protected $redirectTo = '/admin/home/#/dashboard'; // for spa version
+    protected $redirectTo = '/admin/dashboard';
     /**
      * Create a new controller instance.
      *
