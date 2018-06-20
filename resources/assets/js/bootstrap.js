@@ -3,12 +3,15 @@ window._ = require('lodash');
 window.Popper = require('popper.js').default;
 import VueRouter from 'vue-router';
 import VSelect from 'vue-select';
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(VueRouter);
+Vue.use(Vuetify);
 /**
  * Adding Global Components
  */
-
+Vue.component('navbar', require('./components/layouts/navbar'));
 Vue.component('sidebar', require('./components/sidebar.vue'));
 Vue.component('info-card',require('./components/admin/dashboard/infocard.vue'));
 Vue.component('sales-chart-box', require('./components/admin/dashboard/salesChartBox'));

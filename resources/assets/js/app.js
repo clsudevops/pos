@@ -1,6 +1,7 @@
 require('./bootstrap');
 
 import store from './store/store';
+import * as easings from 'vuetify/es5/util/easing-patterns'
 
 const app = new Vue({
     el: '#app',
@@ -10,14 +11,14 @@ const app = new Vue({
     },
     methods: {
         scrollTo(hash, event) {
-            var pos = $(hash).offset().top - 5; 
-            var anchor = hash.split('#');
+            var options = {
+                duration: 1000,
+                offset: 5,
+                easing: 'easeInOutCubic',
+                easings: Object.keys(easings)
+            }
 
-            $('html, body').animate({ scrollTop: pos }, 1000, function () { 
-                window.location.hash = hash 
-            }) 
-            
-            this.active_hash = hash;
+            this.$vuetify.goTo(hash, options);
         },
         openFile(element) {
             document.getElementById(element).click();

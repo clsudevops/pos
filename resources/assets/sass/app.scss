@@ -1,8 +1,9 @@
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-// Bootstrap
-// @import "~bootstrap/scss/bootstrap";
-// @import '~bootstrap-material-design/scss/bootstrap-material-design';
+a {
+	text-decoration: none;
+}
+.wrapper-fixed {
+	margin-top: 5rem;
+}
 
 .bg-primary {
 	background-color: #0f796f!important;

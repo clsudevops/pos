@@ -3,64 +3,39 @@
 @section('title'){{ 'Sign-in' }}@stop
 
 @section('content')
-<div class="container pt-5">
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header"><h4>{{ __('Login') }}</h4></div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group">
-                            <label for="email" class="bmd-label-floating">{{ __('E-Mail Address') }}</label>
-                            <input id="email" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" autofocus>
-
-                            @if ($errors->has('email'))
-                                <span class="invalid-feedback">
-                                    <strong>{{ $errors->first('email') }}</strong>
-                                </span>
-                            @endif
-                            
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password" class="bmd-label-floating">{{ __('Password') }}</label>
-
-                    
-                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" >
-
-                            @if ($errors->has('password'))
-                                <span class="invalid-feedback">
-                                    <strong>{{ $errors->first('password') }}</strong>
-                                </span>
-                            @endif
-                    
-                        </div>
-
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> <small>{{ __('Remember Me') }}</small>
-                                </label>
-                                <a style="color:#0366d6; " class="btn btn-link" href="{{ route('password.request') }}">
-                                    <small>{{ __('Forgot Your Password?') }}</small>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="form-group row justify-content-center">
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-raised btn-primary btn-block">
-                                {{ __('Login') }}
-                            </button>
-                            </div>
-                        </div>
+    <v-container grid-list-md class="mt-4">
+        <v-layout row wrap justify-center>
+            <v-flex xs12 sm6 md4>
+                <v-card class="pa-3">
+                    <form>
+                        <v-flex xs12>
+                            <p class="text-sm-center headline">Login</p>
+                            <v-divider class="mt-1"></v-divider>
+                        </v-flex>
+                        <v-flex xs12>
+                            <v-text-field
+                                prepend-icon="account_circle" 
+                                solo
+                                name="username"
+                                label="Username or Email"
+                            ></v-text-field>
+                        </v-flex>
+                       <v-flex>
+                            <v-text-field prepend-icon="vpn_key" solo name="password" label="Password" type="password"></v-text-field>
+                       </v-flex>
+                       <v-flex xs12>
+                            <a style="color:#0366d6; font-weight: 400; text-transform:uppercase;" class="" href="{{ route('password.request') }}">
+                                <small>{{ __('Forgot Your Password?') }}</small>
+                            </a>
+                        </v-flex>
+                       <v-flex xs12>
+                            <v-btn color="primary" block>
+                            Sign in
+                            </v-btn>
+                        </v-flex>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                </v-card>
+            </v-flex>
+        </v-layout>
+    </v-container>
 @endsection
