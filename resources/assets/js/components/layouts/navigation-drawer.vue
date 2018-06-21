@@ -1,5 +1,11 @@
 <template>
-    <v-navigation-drawer style="margin-top: 4.65rem;" value="true" fixed app>
+    <v-navigation-drawer 
+        mobile-break-point="768"
+        style="margin-top: 4.65rem;" 
+        :value="sidenavIsVisible" 
+        fixed 
+        dark
+        app>
         <!-- <v-toolbar flat>
             <v-list class="pa-0">
                 <v-list-tile avatar>
@@ -41,7 +47,14 @@
 </template>
 
 <script>
+    import { mapGetters } from 'vuex';
+    
     export default {
+        computed: {
+            ...mapGetters({
+                sidenavIsVisible: 'StylesModule/getSidenavState'
+            })
+        },
         data: () => ({
             items: [
                 {

@@ -44013,7 +44013,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__store_store__ = __webpack_require__(355);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuetify_es5_util_easing_patterns__ = __webpack_require__(357);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuetify_es5_util_easing_patterns___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vuetify_es5_util_easing_patterns__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuex__ = __webpack_require__(356);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 __webpack_require__(155);
+
 
 
 
@@ -44025,7 +44029,19 @@ var app = new Vue({
         active_hash: null,
         remember: false
     },
+    computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_2_vuex__["b" /* mapGetters */])({
+        sidenavIsVisible: 'StylesModule/getSidenavState'
+    })),
     methods: {
+        toggleNavDrawer: function toggleNavDrawer() {
+            if (this.sidenavIsVisible) {
+                this.$store.commit('StylesModule/setSidenavState', false);
+                document.getElementsByClassName('main-content')[0].style.marginLeft = 0;
+            } else {
+                this.$store.commit('StylesModule/setSidenavState', true);
+                document.getElementsByClassName('main-content')[0].style.marginLeft = '21.5rem';
+            }
+        },
         scrollTo: function scrollTo(hash, event) {
             var options = {
                 duration: 1000,
@@ -83101,7 +83117,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n.info-card {\n    min-height: 107px;\n    background-color: #ffffff;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 0.25rem;\n    position: relative;\n}\n.info-card-content {\n    width: 60%;\n}\n.info-card-text {\n    margin-top: 1rem;\n    margin-left: 1em;\n}\n.info-card-icon {\n    text-align: center;\n    width: 40%;\n}\n.info-card-icon h1 {\n    line-height: 200%;\n    vertical-align: middle;\n}\n", ""]);
+exports.push([module.i, "\n.info-card {\n    min-height: 107px;\n    background-color: #ffffff;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 0.25rem;\n    position: relative;\n    border: 1px solid #cccc;\n}\n.info-card-content {\n    width: 60%;\n}\n.info-card-text {\n    margin-top: 1rem;\n    margin-left: 1em;\n}\n.info-card-icon {\n    text-align: center;\n    width: 40%;\n}\n.info-card-icon h1 {\n    line-height: 200%;\n    vertical-align: middle;\n}\n", ""]);
 
 // exports
 
@@ -96302,7 +96318,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -96313,8 +96329,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
 //
 //
 //
@@ -96356,94 +96370,112 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row cards-box" }, [
+  return _c(
+    "v-container",
+    { attrs: { "grid-list-md": "" } },
+    [
       _c(
-        "div",
-        { staticClass: "col-md-3" },
+        "v-layout",
+        { staticClass: "cards-box", attrs: { row: "", wrap: "" } },
         [
-          _c("info-card", {
-            attrs: {
-              data: "80",
-              "data-label": "Total Sales",
-              icon: "fas fa-hand-holding-usd",
-              "icon-class": "bg-primary"
-            }
-          })
+          _c(
+            "v-flex",
+            { staticClass: "col-md-3", attrs: { xs12: "", sm6: "", md3: "" } },
+            [
+              _c("info-card", {
+                attrs: {
+                  data: "80",
+                  "data-label": "Total Sales",
+                  icon: "fas fa-hand-holding-usd",
+                  "icon-class": "bg-primary"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-flex",
+            { attrs: { xs12: "", sm6: "", md3: "" } },
+            [
+              _c("info-card", {
+                attrs: {
+                  data: "102",
+                  "data-label": "Total Customers",
+                  icon: "fas fa-users",
+                  "icon-class": "bg-success"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-flex",
+            { attrs: { xs12: "", sm6: "", md3: "" } },
+            [
+              _c("info-card", {
+                attrs: {
+                  data: "1000",
+                  "data-label": "Total Items",
+                  icon: "fas fa-cube",
+                  "icon-class": "bg-info"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-flex",
+            { attrs: { xs12: "", sm6: "", md3: "" } },
+            [
+              _c("info-card", {
+                attrs: {
+                  data: "900",
+                  "data-label": "Total Item Kits",
+                  icon: "fas fa-cubes",
+                  "icon-class": "bg-warning"
+                }
+              })
+            ],
+            1
+          )
         ],
         1
       ),
       _vm._v(" "),
       _c(
-        "div",
-        { staticClass: "col-md-3" },
+        "v-layout",
+        { attrs: { row: "", wrap: "" } },
         [
-          _c("info-card", {
-            attrs: {
-              data: "102",
-              "data-label": "Total Customers",
-              icon: "fas fa-users",
-              "icon-class": "bg-success"
-            }
-          })
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-3" },
-        [
-          _c("info-card", {
-            attrs: {
-              data: "1000",
-              "data-label": "Total Items",
-              icon: "fas fa-cube",
-              "icon-class": "bg-info"
-            }
-          })
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-3" },
-        [
-          _c("info-card", {
-            attrs: {
-              data: "900",
-              "data-label": "Total Item Kits",
-              icon: "fas fa-cubes",
-              "icon-class": "bg-warning"
-            }
-          })
+          _c(
+            "v-flex",
+            { attrs: { xs12: "" } },
+            [
+              _c(
+                "v-card",
+                { staticClass: "pa-3" },
+                [
+                  _c("h5", { staticClass: "mb-3 headline" }, [
+                    _vm._v("Sales Chart")
+                  ]),
+                  _vm._v(" "),
+                  _c("sales-chart-box")
+                ],
+                1
+              )
+            ],
+            1
+          )
         ],
         1
       )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [_c("sales-chart-box")], 1)
-        ])
-      ])
-    ])
-  ])
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c("h5", [_vm._v("Sales Chart")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -104552,13 +104584,17 @@ module.exports = function spread(callback) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_styles_index__ = __webpack_require__(368);
+
 
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
-    modules: {}
+    modules: {
+        StylesModule: __WEBPACK_IMPORTED_MODULE_2__modules_styles_index__["a" /* default */]
+    }
 }));
 
 /***/ }),
@@ -104570,7 +104606,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex
 /* unused harmony export install */
 /* unused harmony export mapState */
 /* unused harmony export mapMutations */
-/* unused harmony export mapGetters */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return mapGetters; });
 /* unused harmony export mapActions */
 /* unused harmony export createNamespacedHelpers */
 /**
@@ -105665,7 +105701,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -105676,6 +105712,15 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(356);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -105719,7 +105764,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+    computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["b" /* mapGetters */])({
+        sidenavIsVisible: 'StylesModule/getSidenavState'
+    })),
     data: function data() {
         return {
             items: [{
@@ -105792,7 +105842,13 @@ var render = function() {
     "v-navigation-drawer",
     {
       staticStyle: { "margin-top": "4.65rem" },
-      attrs: { value: "true", fixed: "", app: "" }
+      attrs: {
+        "mobile-break-point": "768",
+        value: _vm.sidenavIsVisible,
+        fixed: "",
+        dark: "",
+        app: ""
+      }
     },
     [
       _c(
@@ -105885,6 +105941,56 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-c8cb6520", module.exports)
   }
 }
+
+/***/ }),
+/* 368 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__state__ = __webpack_require__(369);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getters__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mutations__ = __webpack_require__(371);
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+    namespaced: true,
+    state: __WEBPACK_IMPORTED_MODULE_0__state__["a" /* default */],
+    getters: __WEBPACK_IMPORTED_MODULE_1__getters__["a" /* default */],
+    mutations: __WEBPACK_IMPORTED_MODULE_2__mutations__["a" /* default */]
+});
+
+/***/ }),
+/* 369 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    sidenav_is_visible: true
+});
+
+/***/ }),
+/* 370 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    getSidenavState: function getSidenavState(state) {
+        return state.sidenav_is_visible;
+    }
+});
+
+/***/ }),
+/* 371 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    setSidenavState: function setSidenavState(state, payload) {
+        state.sidenav_is_visible = payload;
+    }
+});
 
 /***/ })
 /******/ ]);

@@ -1,5 +1,5 @@
 <v-toolbar fixed>
-    <v-toolbar-side-icon></v-toolbar-side-icon>
+    <v-toolbar-side-icon @click.native="toggleNavDrawer"></v-toolbar-side-icon>
     <img src="/images/favicon.png" heght="40" width="40" alt="POS" class="img-circle">
     <v-toolbar-title>
         

@@ -57,8 +57,11 @@ body {
 }
 
 .main-content {
-  margin-left: 21rem;
-  margin-top: 5rem;
+  margin-left: 21.5rem;
+  -webkit-transition: width 2s;
+  /* Safari */
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .sidebar {
@@ -191,5 +194,107 @@ ul.list-notification a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.26) !important;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+/*
+ bootstrap material design
+*/
+
+.bg-primary {
+  background-color: #009688 !important;
+}
+
+a.bg-primary:hover,
+a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: #00635a !important;
+}
+
+.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+a.bg-secondary:hover,
+a.bg-secondary:focus,
+button.bg-secondary:hover,
+button.bg-secondary:focus {
+  background-color: #545b62 !important;
+}
+
+.bg-success {
+  background-color: #4caf50 !important;
+}
+
+a.bg-success:hover,
+a.bg-success:focus,
+button.bg-success:hover,
+button.bg-success:focus {
+  background-color: #3d8b40 !important;
+}
+
+.bg-info {
+  background-color: #03a9f4 !important;
+}
+
+a.bg-info:hover,
+a.bg-info:focus,
+button.bg-info:hover,
+button.bg-info:focus {
+  background-color: #0286c2 !important;
+}
+
+.bg-warning {
+  background-color: #ff5722 !important;
+}
+
+a.bg-warning:hover,
+a.bg-warning:focus,
+button.bg-warning:hover,
+button.bg-warning:focus {
+  background-color: #ee3900 !important;
+}
+
+.bg-danger {
+  background-color: #f44336 !important;
+}
+
+a.bg-danger:hover,
+a.bg-danger:focus,
+button.bg-danger:hover,
+button.bg-danger:focus {
+  background-color: #ea1c0d !important;
+}
+
+.bg-light {
+  background-color: #f5f5f5 !important;
+}
+
+a.bg-light:hover,
+a.bg-light:focus,
+button.bg-light:hover,
+button.bg-light:focus {
+  background-color: gainsboro !important;
+}
+
+.bg-dark {
+  background-color: #424242 !important;
+}
+
+a.bg-dark:hover,
+a.bg-dark:focus,
+button.bg-dark:hover,
+button.bg-dark:focus {
+  background-color: #292929 !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
 }
 

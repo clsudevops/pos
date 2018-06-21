@@ -39,6 +39,7 @@ export default {
         display: flex;
         padding: 0.25rem;
         position: relative;
+        border: 1px solid #cccc;
     }
 
     .info-card-content {
