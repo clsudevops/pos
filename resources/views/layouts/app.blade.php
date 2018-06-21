@@ -25,6 +25,7 @@
     <div id="app" class="wrapper">
         <v-app>
             @include('includes.toolbar')
+            <navigation-drawer></navigation-drawer>
             <div class="wrapper-fixed">
                 @yield('content')
             </div>

@@ -8,6 +8,7 @@ const app = new Vue({
     store,
     data: {
         active_hash: null,
+        remember: false
     },
     methods: {
         scrollTo(hash, event) {
@@ -25,12 +26,12 @@ const app = new Vue({
         },
         setInputFile(element) {
             document.getElementById('inputFile').value = document.getElementById(element).files[0].name
+        },
+        logout() {
+            document.getElementById('logout-form').submit();
         }
     },
     created() {
-        if(typeof window.location.hash != 'undefined'){
-            this.active_hash = window.location.hash;
-        }
-        $(document).ready(function () { $('body').bootstrapMaterialDesign(); });
+        
     }
 });

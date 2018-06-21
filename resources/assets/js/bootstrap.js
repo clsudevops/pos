@@ -1,17 +1,22 @@
 window.Vue = require('vue');
+window.Vuetify = require('vuetify');
 window._ = require('lodash');
 window.Popper = require('popper.js').default;
 import VueRouter from 'vue-router';
 import VSelect from 'vue-select';
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
+// import Vuetify from 'vuetify'
+// import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(VueRouter);
-Vue.use(Vuetify);
+// Vue.use(Vuetify);
 /**
  * Adding Global Components
  */
-Vue.component('navbar', require('./components/layouts/navbar'));
+Vue.component('jumbotron', require('./components/home/jumbotron'));
+Vue.component('featured-products', require('./components/home/products'));
+Vue.component('contact-us', require('./components/home/contact-us'));
+Vue.component('navigation-drawer', require('./components/layouts/navigation-drawer'));
+
 Vue.component('sidebar', require('./components/sidebar.vue'));
 Vue.component('info-card',require('./components/admin/dashboard/infocard.vue'));
 Vue.component('sales-chart-box', require('./components/admin/dashboard/salesChartBox'));
@@ -40,8 +45,6 @@ Vue.component('store-form', require('./components/admin/stores/storeForm.vue'));
 
 try {
     window.$ = window.jQuery = require('jquery');
-
-    require('bootstrap-material-design');
 } catch (e) {}
 
 /**
