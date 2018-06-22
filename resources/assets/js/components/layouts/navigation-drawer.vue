@@ -1,6 +1,6 @@
 <template>
     <v-navigation-drawer 
-        mobile-break-point="768"
+        stateless
         style="margin-top: 4.65rem;" 
         :value="sidenavIsVisible" 
         fixed 

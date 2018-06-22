@@ -10,6 +10,7 @@ const app = new Vue({
     data: {
         active_hash: null,
         remember: false,
+        windowWidth: document.documentElement.clientWidth
     },
     computed: {
         ...mapGetters({
@@ -24,7 +25,9 @@ const app = new Vue({
             }
             else{
                 this.$store.commit('StylesModule/setSidenavState', true)
-                document.getElementsByClassName('main-content')[0].style.marginLeft = '21.5rem';
+                if(this.windowWidth > 768) {
+                    document.getElementsByClassName('main-content')[0].style.marginLeft = '21.5rem';
+                }
             }
         },
         scrollTo(hash, event) {
@@ -45,9 +48,34 @@ const app = new Vue({
         },
         logout() {
             document.getElementById('logout-form').submit();
+        },
+        handleResize(event) {
+            this.windowWidth = document.documentElement.clientWidth;
+            if(this.windowWidth <= 768) {
+                document.getElementsByClassName('main-content')[0].style.marginLeft = 0;
+                if (this.sidenavIsVisible) {
+                    this.$store.commit('StylesModule/setSidenavState', true);
+                }
+                else{
+                    this.$store.commit('StylesModule/setSidenavState', false)
+                }
+            }
+            else{
+                if(this.sidenavIsVisible){
+                    document.getElementsByClassName('main-content')[0].style.marginLeft = '21.5rem';
+                }
+                else{
+                    document.getElementsByClassName('main-content')[0].style.marginLeft = 0;
+                }
+                // if (!this.sidenavIsVisible) {
+                //     this.$store.commit('StylesModule/setSidenavState', true);
+                // }
+                // document.getElementsByClassName('main-content')[0].style.marginLeft = '21.5rem';
+                // this.$store.commit('StylesModule/setSidenavState', true)
+            }
         }
     },
-    created() {
-        
+    mounted () {
+        window.addEventListener('resize', this.handleResize)
     }
 });

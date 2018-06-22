@@ -25,7 +25,9 @@
     <div id="app" class="wrapper">
         <v-app>
             @include('includes.toolbar')
-            <navigation-drawer></navigation-drawer>
+            @auth
+                <navigation-drawer></navigation-drawer>
+            @endauth
             <div class="wrapper-fixed">
                 @yield('content')
             </div>
