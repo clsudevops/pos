@@ -87418,10 +87418,6 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(260)
-}
 var normalizeComponent = __webpack_require__(2)
 /* script */
 var __vue_script__ = __webpack_require__(262)
@@ -87430,7 +87426,7 @@ var __vue_template__ = __webpack_require__(267)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = injectStyle
+var __vue_styles__ = null
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -87465,213 +87461,277 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 260 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(261);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(5)("1364e732", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-32f585da\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./customersDataTable.vue", function() {
-     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-32f585da\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./customersDataTable.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 261 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 260 */,
+/* 261 */,
 /* 262 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_pagination__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_pagination__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(14);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    components: {
-        Pagination: __WEBPACK_IMPORTED_MODULE_0__components_pagination___default.a
-    },
-    data: function data() {
-        return {
-            selected: { label: 'All', value: null },
-            options: [{
-                label: 'All',
-                value: null
-            }, {
-                label: 'Item Id',
-                value: 'item_id'
-            }, {
-                label: 'Item Name',
-                value: 'item_name'
-            }, {
-                label: 'Quantity',
-                value: 'quantity'
-            }]
-        };
-    }
+  computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["b" /* mapGetters */])({
+    customer: 'CustomersModule/getCustomer'
+  })),
+  data: function data() {
+    return {
+      dialog: false,
+      search: '',
+      selected: [],
+      loading: false,
+      headers: [{
+        text: 'First name',
+        value: 'first_name'
+      }, { text: 'Last name', value: 'last_name' }, { text: 'Email', value: 'email' }, { text: 'Phone no.', value: 'phone' }, { text: 'Store Balance', value: 'store_balance' }, { text: 'Company', value: 'company' }, { text: 'Actions', value: 'action', sortable: false }],
+      customers: [{
+        value: false,
+        first_name: 'Marvin',
+        last_name: 'Tate',
+        email: 'MarvinMTate@dayrep.com',
+        phone: '928-719-5837',
+        store_balance: 4.0,
+        company: 'Childs Restaurants'
+      }, {
+        value: false,
+        first_name: 'Marvin',
+        last_name: 'Tate',
+        email: 'MarvinMTate@dayrep.com',
+        phone: '928-719-5837',
+        store_balance: 4.0,
+        company: 'Regional Book Store'
+      }, {
+        value: false,
+        first_name: 'Ethel',
+        last_name: 'Gonzales',
+        email: 'EthelGGonzalez@jourrapide.com',
+        phone: '407-856-2791',
+        store_balance: 4.0,
+        company: 'Micro Design'
+      }, {
+        value: false,
+        first_name: 'Leslie',
+        last_name: 'Dosch',
+        email: 'LeslieTDosch@teleworm.us',
+        phone: '321-615-0726',
+        store_balance: 4.0,
+        company: 'Tech Revo'
+      }, {
+        value: false,
+        first_name: 'Marvin',
+        last_name: 'Tate',
+        email: 'MarvinMTate@dayrep.com',
+        phone: '928-719-5837',
+        store_balance: 4.0,
+        company: 'Childs Restaurants'
+      }, {
+        value: false,
+        first_name: 'Marvin',
+        last_name: 'Tate',
+        email: 'MarvinMTate@dayrep.com',
+        phone: '928-719-5837',
+        store_balance: 4.0,
+        company: 'Regional Book Store'
+      }, {
+        value: false,
+        first_name: 'Ethel',
+        last_name: 'Gonzales',
+        email: 'EthelGGonzalez@jourrapide.com',
+        phone: '407-856-2791',
+        store_balance: 4.0,
+        company: 'Micro Design'
+      }, {
+        value: false,
+        first_name: 'Leslie',
+        last_name: 'Dosch',
+        email: 'LeslieTDosch@teleworm.us',
+        phone: '321-615-0726',
+        store_balance: 4.0,
+        company: 'Tech Revo'
+      }, {
+        value: false,
+        first_name: 'Marvin',
+        last_name: 'Tate',
+        email: 'MarvinMTate@dayrep.com',
+        phone: '928-719-5837',
+        store_balance: 4.0,
+        company: 'Childs Restaurants'
+      }, {
+        value: false,
+        first_name: 'Marvin',
+        last_name: 'Tate',
+        email: 'MarvinMTate@dayrep.com',
+        phone: '928-719-5837',
+        store_balance: 4.0,
+        company: 'Regional Book Store'
+      }, {
+        value: false,
+        first_name: 'Ethel',
+        last_name: 'Gonzales',
+        email: 'EthelGGonzalez@jourrapide.com',
+        phone: '407-856-2791',
+        store_balance: 4.0,
+        company: 'Micro Design'
+      }, {
+        value: false,
+        first_name: 'Leslie',
+        last_name: 'Dosch',
+        email: 'LeslieTDosch@teleworm.us',
+        phone: '321-615-0726',
+        store_balance: 4.0,
+        company: 'Tech Revo'
+      }]
+    };
+  },
+
+  methods: {
+    editCustomer: function editCustomer(item) {},
+    deleteCustomer: function deleteCustomer(item) {}
+  }
 });
 
 /***/ }),
@@ -87808,278 +87868,543 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header clearfix" }, [
-            _c("div", { staticClass: "form-inline float-left" }, [
-              _vm._m(0),
-              _vm._v(" "),
+  return _c(
+    "v-container",
+    { attrs: { "grid-list-md": "" } },
+    [
+      _c(
+        "v-layout",
+        { attrs: { row: "", wrap: "" } },
+        [
+          _c(
+            "v-flex",
+            { attrs: { xs12: "" } },
+            [
               _c(
-                "div",
-                { staticClass: "form-group pt-0 mr-2" },
+                "v-layout",
+                { attrs: { row: "", wrap: "" } },
                 [
-                  _c("v-select", {
-                    attrs: {
-                      placeholder: "Filter by Category",
-                      label: "label",
-                      options: _vm.options
-                    },
-                    model: {
-                      value: _vm.selected,
-                      callback: function($$v) {
-                        _vm.selected = $$v
-                      },
-                      expression: "selected"
-                    }
-                  })
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", md4: "" } },
+                    [
+                      _c("v-text-field", {
+                        attrs: {
+                          solo: "",
+                          label: "Seach Customers",
+                          "prepend-icon": "search"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", md1: "" } },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "ma-0",
+                          attrs: { block: "", color: "success", large: "" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                        Search\n                    "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "pa-1" },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "ma-0",
+                          attrs: { color: "success", large: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.dialog = true
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n                        New Customer\n                    "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-menu",
+                        { attrs: { "offset-y": "" } },
+                        [
+                          _c(
+                            "v-btn",
+                            {
+                              staticClass: "ma-0",
+                              attrs: { slot: "activator", large: "" },
+                              slot: "activator"
+                            },
+                            [_c("v-icon", [_vm._v("more_horiz")])],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-list",
+                            [
+                              _c(
+                                "v-list-tile",
+                                { attrs: { href: "" } },
+                                [
+                                  _c("v-list-tile-title", [
+                                    _vm._v("Excel Import")
+                                  ])
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-list-tile",
+                                { attrs: { href: "" } },
+                                [
+                                  _c("v-list-tile-title", [
+                                    _vm._v("Excel Export")
+                                  ])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
                 ],
                 1
-              ),
-              _vm._v(" "),
-              _vm._m(1)
-            ]),
-            _vm._v(" "),
-            _vm._m(2)
-          ]),
+              )
+            ],
+            1
+          ),
           _vm._v(" "),
-          _vm._m(3),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-footer" }, [_c("pagination")], 1)
-        ])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group pt-0 mr-2" }, [
-      _c("input", {
-        staticClass: "form-control",
-        staticStyle: { width: "250px", "margin-top": "0.4rem" },
-        attrs: {
-          type: "text",
-          id: "searchItemsField",
-          placeholder: "Search Items"
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("button", { staticClass: "btn btn-success btn-raised mb-0" }, [
-        _c("i", { staticClass: "fas fa-search" }),
-        _vm._v(
-          "\n                                Search\n                            "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-inline float-right" }, [
-      _c("div", { staticClass: "form-group mr-1" }, [
-        _c(
-          "a",
-          {
-            staticClass: "btn btn-primary btn-raised mb-0",
-            attrs: { href: "/admin/customers/create" }
-          },
-          [
-            _c("i", { staticClass: "fas fa-plus-circle" }),
-            _vm._v(" New Customer\n                            ")
-          ]
-        )
-      ]),
+          _c(
+            "v-flex",
+            { attrs: { xs12: "" } },
+            [
+              _c("v-data-table", {
+                staticClass: "elevation-1",
+                attrs: {
+                  headers: _vm.headers,
+                  items: _vm.customers,
+                  search: _vm.search,
+                  "item-key": "name",
+                  "select-all": ""
+                },
+                scopedSlots: _vm._u([
+                  {
+                    key: "headerCell",
+                    fn: function(props) {
+                      return [
+                        _c("v-tooltip", { attrs: { bottom: "" } }, [
+                          _c(
+                            "span",
+                            { attrs: { slot: "activator" }, slot: "activator" },
+                            [
+                              _vm._v(
+                                "\n                    " +
+                                  _vm._s(props.header.text) +
+                                  "\n                    "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("span", [
+                            _vm._v(
+                              "\n                    " +
+                                _vm._s(props.header.text) +
+                                "\n                    "
+                            )
+                          ])
+                        ])
+                      ]
+                    }
+                  },
+                  {
+                    key: "items",
+                    fn: function(props) {
+                      return [
+                        _c(
+                          "td",
+                          [
+                            _c("v-checkbox", {
+                              attrs: { primary: "", "hide-details": "" },
+                              model: {
+                                value: props.selected,
+                                callback: function($$v) {
+                                  _vm.$set(props, "selected", $$v)
+                                },
+                                expression: "props.selected"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(props.item.first_name))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(props.item.last_name))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(props.item.email))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(props.item.phone))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(props.item.store_balance))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(props.item.company))]),
+                        _vm._v(" "),
+                        _c(
+                          "td",
+                          { staticClass: "justify-center layout px-0" },
+                          [
+                            _c(
+                              "v-btn",
+                              {
+                                staticClass: "mx-0",
+                                attrs: { icon: "" },
+                                on: {
+                                  click: function($event) {
+                                    _vm.editCustomer(props.item)
+                                  }
+                                }
+                              },
+                              [
+                                _c("v-icon", { attrs: { color: "teal" } }, [
+                                  _vm._v("edit")
+                                ])
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "v-btn",
+                              {
+                                staticClass: "mx-0",
+                                attrs: { icon: "" },
+                                on: {
+                                  click: function($event) {
+                                    _vm.deleteCustomer(props.item)
+                                  }
+                                }
+                              },
+                              [
+                                _c("v-icon", { attrs: { color: "error" } }, [
+                                  _vm._v("delete")
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ]
+                    }
+                  }
+                ]),
+                model: {
+                  value: _vm.selected,
+                  callback: function($$v) {
+                    _vm.selected = $$v
+                  },
+                  expression: "selected"
+                }
+              })
+            ],
+            1
+          )
+        ],
+        1
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-secondary btn-outline dropdown-toggle mb-0",
-            attrs: {
-              type: "button",
-              "data-toggle": "dropdown",
-              "aria-haspopup": "true",
-              "aria-expanded": "false"
-            }
-          },
-          [
-            _c("span", { staticClass: "sr-only" }, [_vm._v("Toggle Dropdown")]),
-            _vm._v(" "),
-            _c("i", { staticClass: "fas fa-ellipsis-v" })
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "dropdown-menu", staticStyle: {} }, [
-          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fas fa-upload" }),
-            _vm._v(" Excel Import")
-          ]),
-          _vm._v(" "),
-          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fas fa-download" }),
-            _vm._v(" Excel Export")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "dropdown-divider" }),
-          _vm._v(" "),
-          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fas fa-times-circle" }),
-            _vm._v(" Cleanup old Customers")
-          ]),
-          _vm._v(" "),
-          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fas fa-trash-alt" }),
-            _vm._v("  Manage Deleted Customers")
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card body table-responsive" }, [
-      _c("table", { staticClass: "table table-striped" }, [
-        _c("thead", [
-          _c("tr", [
-            _c("th", { attrs: { scope: "col" } }, [
-              _c("div", { staticClass: "checkbox" }, [
-                _c("label", [
-                  _c("input", { attrs: { type: "checkbox" } }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "check" })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "th",
-              { staticStyle: { width: "100px" }, attrs: { scope: "col" } },
-              [_vm._v("Action")]
-            ),
-            _vm._v(" "),
-            _c("th", { attrs: { scope: "col" } }, [_vm._v("First")]),
-            _vm._v(" "),
-            _c("th", { attrs: { scope: "col" } }, [_vm._v("Last")]),
-            _vm._v(" "),
-            _c("th", { attrs: { scope: "col" } }, [_vm._v("Email")]),
-            _vm._v(" "),
-            _c("th", [_vm._v("Phone Number")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tbody", [
-          _c("tr", [
-            _c("td", { attrs: { scope: "row" } }, [
-              _c("div", { staticClass: "checkbox" }, [
-                _c("label", [
-                  _c("input", { attrs: { type: "checkbox" } }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "check" })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-raised btn-sm",
-                  attrs: { type: "button" }
+      _c(
+        "v-layout",
+        { attrs: { row: "", "justify-center": "" } },
+        [
+          _c(
+            "v-dialog",
+            {
+              attrs: { persistent: "", "max-width": "500px" },
+              model: {
+                value: _vm.dialog,
+                callback: function($$v) {
+                  _vm.dialog = $$v
                 },
-                [_vm._v("Edit "), _c("i", { staticClass: "fas fa-edit" })]
-              )
-            ]),
-            _vm._v(" "),
-            _c("td", [_vm._v("Mark")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("Otto")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("mark.otto@gmail.com")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("+63916465456")])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { attrs: { scope: "row" } }, [
-              _c("div", { staticClass: "checkbox" }, [
-                _c("label", [
-                  _c("input", { attrs: { type: "checkbox" } }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "check" })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("td", [
+                expression: "dialog"
+              }
+            },
+            [
               _c(
-                "button",
-                {
-                  staticClass: "btn btn-raised btn-sm",
-                  attrs: { type: "button" }
-                },
-                [_vm._v("Edit "), _c("i", { staticClass: "fas fa-edit" })]
-              )
-            ]),
-            _vm._v(" "),
-            _c("td", [_vm._v("Jacob")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("Thornton")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("jacob.thornton@gmail.com")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("+63916465456")])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", { attrs: { scope: "row" } }, [
-              _c("div", { staticClass: "checkbox" }, [
-                _c("label", [
-                  _c("input", { attrs: { type: "checkbox" } }),
+                "v-card",
+                [
+                  _c("v-card-title", [
+                    _c("h1", { staticClass: "headline" }, [
+                      _vm._v("Customer Details")
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _c("span", { staticClass: "checkbox-decorator" }, [
-                    _c("span", { staticClass: "check" })
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-raised btn-sm",
-                  attrs: { type: "button" }
-                },
-                [_vm._v("Edit "), _c("i", { staticClass: "fas fa-edit" })]
+                  _c(
+                    "v-card-text",
+                    [
+                      _c(
+                        "v-container",
+                        { attrs: { "grid-list-md": "" } },
+                        [
+                          _c(
+                            "v-layout",
+                            {
+                              attrs: { row: "", wrap: "", "justify-center": "" }
+                            },
+                            [
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: { solo: "", label: "First name" },
+                                    model: {
+                                      value: _vm.customer.first_name,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.customer,
+                                          "first_name",
+                                          $$v
+                                        )
+                                      },
+                                      expression: "customer.first_name"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: { solo: "", label: "Last name" },
+                                    model: {
+                                      value: _vm.customer.last_name,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.customer, "last_name", $$v)
+                                      },
+                                      expression: "customer.last_name"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: { solo: "", label: "Email" },
+                                    model: {
+                                      value: _vm.customer.email,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.customer, "email", $$v)
+                                      },
+                                      expression: "customer.email"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: { solo: "", label: "Phone number" },
+                                    model: {
+                                      value: _vm.customer.phone,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.customer, "phone", $$v)
+                                      },
+                                      expression: "customer.phone"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: {
+                                      solo: "",
+                                      label: "Complete address"
+                                    },
+                                    model: {
+                                      value: _vm.customer.address,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.customer, "address", $$v)
+                                      },
+                                      expression: "customer.address"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: { solo: "", label: "Company name" },
+                                    model: {
+                                      value: _vm.customer.company_name,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.customer,
+                                          "company_name",
+                                          $$v
+                                        )
+                                      },
+                                      expression: "customer.company_name"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: { solo: "", label: "Store Balance" },
+                                    model: {
+                                      value: _vm.customer.store_balance,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.customer,
+                                          "store_balance",
+                                          $$v
+                                        )
+                                      },
+                                      expression: "customer.store_balance"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: {
+                                      "multi-line": "",
+                                      solo: "",
+                                      label: "Description"
+                                    },
+                                    model: {
+                                      value: _vm.customer.description,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.customer,
+                                          "description",
+                                          $$v
+                                        )
+                                      },
+                                      expression: "customer.description"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "" } },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    { attrs: { color: "success", block: "" } },
+                                    [
+                                      _vm._v(
+                                        "\n                                    Submit\n                                "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "" } },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { block: "" },
+                                      on: {
+                                        click: function($event) {
+                                          _vm.dialog = false
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                    Cancel\n                                "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
               )
-            ]),
-            _vm._v(" "),
-            _c("td", [_vm._v("Larry")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("Silva")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("larry.silva@gmail.com")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("+63916465456")])
-          ])
-        ])
-      ])
-    ])
-  }
-]
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -88625,10 +88950,6 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(274)
-}
 var normalizeComponent = __webpack_require__(2)
 /* script */
 var __vue_script__ = __webpack_require__(276)
@@ -88637,7 +88958,7 @@ var __vue_template__ = __webpack_require__(277)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = injectStyle
+var __vue_styles__ = null
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -88672,329 +88993,254 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 274 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(275);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(5)("299f0c76", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a071f2f8\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./itemsDataTable.vue", function() {
-     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a071f2f8\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./itemsDataTable.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 275 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.v-select.searchable .dropdown-toggle {\n    border-top: none;\n    border-left: none;\n    border-right: none;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 274 */,
+/* 275 */,
 /* 276 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_pagination__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_pagination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_pagination__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(14);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    components: {
+  computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["b" /* mapGetters */])({
+    customer: 'CustomersModule/getCustomer'
+  })),
+  data: function data() {
+    return {
+      dialog: false,
+      search: '',
+      selected: [],
+      loading: false,
+      headers: [{
+        text: 'Dessert (100g serving)',
+        align: 'left',
+        sortable: false,
+        value: 'name'
+      }, { text: 'Calories', value: 'calories' }, { text: 'Fat (g)', value: 'fat' }, { text: 'Carbs (g)', value: 'carbs' }, { text: 'Protein (g)', value: 'protein' }, { text: 'Iron (%)', value: 'iron' }, { text: 'Actions', value: 'action', sortable: false }],
+      desserts: [{
+        value: false,
+        name: 'Frozen Yogurt',
+        calories: 159,
+        fat: 6.0,
+        carbs: 24,
+        protein: 4.0,
+        iron: '1%'
+      }, {
+        value: false,
+        name: 'Ice cream sandwich',
+        calories: 237,
+        fat: 9.0,
+        carbs: 37,
+        protein: 4.3,
+        iron: '1%'
+      }, {
+        value: false,
+        name: 'Eclair',
+        calories: 262,
+        fat: 16.0,
+        carbs: 23,
+        protein: 6.0,
+        iron: '7%'
+      }, {
+        value: false,
+        name: 'Cupcake',
+        calories: 305,
+        fat: 3.7,
+        carbs: 67,
+        protein: 4.3,
+        iron: '8%'
+      }, {
+        value: false,
+        name: 'Gingerbread',
+        calories: 356,
+        fat: 16.0,
+        carbs: 49,
+        protein: 3.9,
+        iron: '16%'
+      }, {
+        value: false,
+        name: 'Jelly bean',
+        calories: 375,
+        fat: 0.0,
+        carbs: 94,
+        protein: 0.0,
+        iron: '0%'
+      }, {
+        value: false,
+        name: 'Lollipop',
+        calories: 392,
+        fat: 0.2,
+        carbs: 98,
+        protein: 0,
+        iron: '2%'
+      }, {
+        value: false,
+        name: 'Honeycomb',
+        calories: 408,
+        fat: 3.2,
+        carbs: 87,
+        protein: 6.5,
+        iron: '45%'
+      }, {
+        value: false,
+        name: 'Donut',
+        calories: 452,
+        fat: 25.0,
+        carbs: 51,
+        protein: 4.9,
+        iron: '22%'
+      }, {
+        value: false,
+        name: 'KitKat',
+        calories: 518,
+        fat: 26.0,
+        carbs: 65,
+        protein: 7,
+        iron: '6%'
+      }]
+    };
+  },
 
-        Pagination: __WEBPACK_IMPORTED_MODULE_0__components_pagination___default.a
-    },
-    data: function data() {
-        return {
-            selected: {
-                label: 'All',
-                value: null
-            },
-            options: [{
-                label: 'All',
-                value: null
-            }, {
-                label: 'Item Id',
-                value: 'item_id'
-            }, {
-                label: 'Item Name',
-                value: 'item_name'
-            }, {
-                label: 'Quantity',
-                value: 'quantity'
-            }]
-        };
-    }
+  methods: {
+    editItem: function editItem(item) {},
+    deleteItem: function deleteItem(item) {}
+  }
 });
 
 /***/ }),
@@ -89005,513 +89251,476 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header clearfix" }, [
-            _c("div", { staticClass: "form-inline float-left" }, [
-              _vm._m(0),
-              _vm._v(" "),
+  return _c(
+    "v-container",
+    { attrs: { "grid-list-md": "" } },
+    [
+      _c(
+        "v-layout",
+        { attrs: { row: "", wrap: "" } },
+        [
+          _c(
+            "v-flex",
+            { attrs: { xs12: "" } },
+            [
               _c(
-                "div",
-                { staticClass: "form-group pt-0 mr-2" },
+                "v-layout",
+                { attrs: { row: "", wrap: "" } },
                 [
-                  _c("v-select", {
-                    attrs: {
-                      placeholder: "Filter by Category",
-                      label: "label",
-                      options: _vm.options
-                    },
-                    model: {
-                      value: _vm.selected,
-                      callback: function($$v) {
-                        _vm.selected = $$v
-                      },
-                      expression: "selected"
-                    }
-                  })
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", md4: "" } },
+                    [
+                      _c("v-text-field", {
+                        attrs: {
+                          solo: "",
+                          label: "Seach Items",
+                          "prepend-icon": "search"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "", md1: "" } },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "ma-0",
+                          attrs: { block: "", color: "success", large: "" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                        Search\n                    "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "pa-1" },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "ma-0",
+                          attrs: { color: "success", large: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.dialog = true
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n                        New Item\n                    "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-menu",
+                        { attrs: { "offset-y": "" } },
+                        [
+                          _c(
+                            "v-btn",
+                            {
+                              staticClass: "ma-0",
+                              attrs: { slot: "activator", large: "" },
+                              slot: "activator"
+                            },
+                            [_c("v-icon", [_vm._v("more_horiz")])],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-list",
+                            [
+                              _c(
+                                "v-list-tile",
+                                { attrs: { href: "" } },
+                                [
+                                  _c("v-list-tile-title", [
+                                    _vm._v("Excel Import")
+                                  ])
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-list-tile",
+                                { attrs: { href: "" } },
+                                [
+                                  _c("v-list-tile-title", [
+                                    _vm._v("Excel Export")
+                                  ])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
                 ],
                 1
-              ),
-              _vm._v(" "),
-              _vm._m(1)
-            ]),
-            _vm._v(" "),
-            _vm._m(2)
-          ]),
+              )
+            ],
+            1
+          ),
           _vm._v(" "),
-          _vm._m(3),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-footer" }, [_c("pagination")], 1)
-        ])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group pt-0 mr-2" }, [
-      _c("input", {
-        staticClass: "form-control",
-        staticStyle: { width: "250px", "margin-top": "0.4rem" },
-        attrs: {
-          type: "text",
-          id: "searchItemsField",
-          placeholder: "Search Items"
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("button", { staticClass: "btn btn-success btn-raised mb-0" }, [
-        _c("i", { staticClass: "fas fa-search" }),
-        _vm._v(
-          "\n                                Search\n                            "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-inline float-right" }, [
-      _c("div", { staticClass: "form-group mr-1" }, [
-        _c(
-          "a",
-          {
-            staticClass: "btn btn-primary btn-raised mb-0",
-            attrs: { href: "/admin/items/create" }
-          },
-          [
-            _c("i", { staticClass: "fas fa-plus-circle" }),
-            _vm._v(" New Item\n                            ")
-          ]
-        )
-      ]),
+          _c(
+            "v-flex",
+            { attrs: { xs12: "" } },
+            [
+              _c("v-data-table", {
+                staticClass: "elevation-1",
+                attrs: {
+                  headers: _vm.headers,
+                  items: _vm.desserts,
+                  search: _vm.search,
+                  "item-key": "name",
+                  "select-all": ""
+                },
+                scopedSlots: _vm._u([
+                  {
+                    key: "headerCell",
+                    fn: function(props) {
+                      return [
+                        _c("v-tooltip", { attrs: { bottom: "" } }, [
+                          _c(
+                            "span",
+                            { attrs: { slot: "activator" }, slot: "activator" },
+                            [
+                              _vm._v(
+                                "\n                    " +
+                                  _vm._s(props.header.text) +
+                                  "\n                    "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("span", [
+                            _vm._v(
+                              "\n                    " +
+                                _vm._s(props.header.text) +
+                                "\n                    "
+                            )
+                          ])
+                        ])
+                      ]
+                    }
+                  },
+                  {
+                    key: "items",
+                    fn: function(props) {
+                      return [
+                        _c(
+                          "td",
+                          [
+                            _c("v-checkbox", {
+                              attrs: { primary: "", "hide-details": "" },
+                              model: {
+                                value: props.selected,
+                                callback: function($$v) {
+                                  _vm.$set(props, "selected", $$v)
+                                },
+                                expression: "props.selected"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(props.item.name))]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "text-xs-right" }, [
+                          _vm._v(_vm._s(props.item.calories))
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "text-xs-right" }, [
+                          _vm._v(_vm._s(props.item.fat))
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "text-xs-right" }, [
+                          _vm._v(_vm._s(props.item.carbs))
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "text-xs-right" }, [
+                          _vm._v(_vm._s(props.item.protein))
+                        ]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "text-xs-right" }, [
+                          _vm._v(_vm._s(props.item.iron))
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "td",
+                          { staticClass: "justify-center layout px-0" },
+                          [
+                            _c(
+                              "v-btn",
+                              {
+                                staticClass: "mx-0",
+                                attrs: { icon: "" },
+                                on: {
+                                  click: function($event) {
+                                    _vm.editItem(props.item)
+                                  }
+                                }
+                              },
+                              [
+                                _c("v-icon", { attrs: { color: "teal" } }, [
+                                  _vm._v("edit")
+                                ])
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "v-btn",
+                              {
+                                staticClass: "mx-0",
+                                attrs: { icon: "" },
+                                on: {
+                                  click: function($event) {
+                                    _vm.deleteItem(props.item)
+                                  }
+                                }
+                              },
+                              [
+                                _c("v-icon", { attrs: { color: "error" } }, [
+                                  _vm._v("delete")
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ]
+                    }
+                  }
+                ]),
+                model: {
+                  value: _vm.selected,
+                  callback: function($$v) {
+                    _vm.selected = $$v
+                  },
+                  expression: "selected"
+                }
+              })
+            ],
+            1
+          )
+        ],
+        1
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-secondary btn-outline dropdown-toggle mb-0",
-            attrs: {
-              type: "button",
-              "data-toggle": "dropdown",
-              "aria-haspopup": "true",
-              "aria-expanded": "false"
-            }
-          },
-          [
-            _c("span", { staticClass: "sr-only" }, [_vm._v("Toggle Dropdown")]),
-            _vm._v(" "),
-            _c("i", { staticClass: "fas fa-ellipsis-v" })
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "dropdown-menu", staticStyle: {} }, [
-          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-            _vm._v("Action")
-          ]),
-          _vm._v(" "),
-          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-            _vm._v("Another action")
-          ]),
-          _vm._v(" "),
-          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-            _vm._v("Something else here")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "dropdown-divider" }),
-          _vm._v(" "),
-          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-            _vm._v("Separated link")
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card body" }, [
-      _c("div", { staticClass: "table-responsive" }, [
-        _c("table", { staticClass: "table table-striped" }, [
-          _c("thead", [
-            _c("tr", [
-              _c("th", { attrs: { scope: "col" } }, [
-                _c("div", { staticClass: "checkbox" }, [
-                  _c("label", [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "check" })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
+      _c(
+        "v-layout",
+        { attrs: { row: "", "justify-center": "" } },
+        [
+          _c(
+            "v-dialog",
+            {
+              attrs: { persistent: "", "max-width": "500px" },
+              model: {
+                value: _vm.dialog,
+                callback: function($$v) {
+                  _vm.dialog = $$v
+                },
+                expression: "dialog"
+              }
+            },
+            [
               _c(
-                "th",
-                { staticStyle: { width: "100px" }, attrs: { scope: "col" } },
-                [_vm._v("Action")]
-              ),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Item Id")]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Name")]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Category")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Cost Price")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Selling Price")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Quantity")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Location Cost Price")]),
-              _vm._v(" "),
-              _c("th", [_vm._v("Description")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tbody", [
-            _c("tr", [
-              _c("td", { attrs: { scope: "row" } }, [
-                _c("div", { staticClass: "checkbox" }, [
-                  _c("label", [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "check" })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("td", [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-raised btn-sm",
-                    attrs: { type: "button" }
-                  },
-                  [
-                    _vm._v(
-                      "Edit\n                                            "
-                    ),
-                    _c("i", { staticClass: "fas fa-edit" })
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("1000")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Crop Giant")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Fertilizer")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱399.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱499.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("100")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱499.00")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("img", {
-                  attrs: {
-                    src:
-                      "https://ph-test-11.slatic.net/p/3/crop-giant-15-15-30-1kg-1730-96044411-28a9c792e2f2330f7cd9462f2748cfcb-catalog_233.jpg",
-                    height: "45",
-                    width: "45",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", { attrs: { scope: "row" } }, [
-                _c("div", { staticClass: "checkbox" }, [
-                  _c("label", [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "check" })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("td", [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-raised btn-sm",
-                    attrs: { type: "button" }
-                  },
-                  [
-                    _vm._v(
-                      "Edit\n                                            "
-                    ),
-                    _c("i", { staticClass: "fas fa-edit" })
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("1001")]),
-              _vm._v(" "),
-              _c("td", [
-                _vm._v(
-                  "\n                                        Spitfire 480SL Glyphosate Herbicide"
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Pesticide")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱3,100.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱3,150.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("120")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱3,150.00")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("img", {
-                  attrs: {
-                    src:
-                      "https://ph-test-11.slatic.net/p/3/spitfire-480sl-glyphosate-herbicide-1-gallon-6763-52097958-7ae7c5b9af58605a6c4ff7439adb68dc-catalog_233.jpg",
-                    height: "45",
-                    width: "45",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", { attrs: { scope: "row" } }, [
-                _c("div", { staticClass: "checkbox" }, [
-                  _c("label", [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "check" })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("td", [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-raised btn-sm",
-                    attrs: { type: "button" }
-                  },
-                  [
-                    _vm._v(
-                      "Edit\n                                            "
-                    ),
-                    _c("i", { staticClass: "fas fa-edit" })
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("1000")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Crop Giant")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Fertilizer")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱399.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱499.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("100")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱499.00")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("img", {
-                  attrs: {
-                    src:
-                      "https://ph-test-11.slatic.net/p/3/crop-giant-15-15-30-1kg-1730-96044411-28a9c792e2f2330f7cd9462f2748cfcb-catalog_233.jpg",
-                    height: "45",
-                    width: "45",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", { attrs: { scope: "row" } }, [
-                _c("div", { staticClass: "checkbox" }, [
-                  _c("label", [_c("input", { attrs: { type: "checkbox" } })])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("td", [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-raised btn-sm",
-                    attrs: { type: "button" }
-                  },
-                  [
-                    _vm._v(
-                      "Edit\n                                            "
-                    ),
-                    _c("i", { staticClass: "fas fa-edit" })
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("1001")]),
-              _vm._v(" "),
-              _c("td", [
-                _vm._v(
-                  "\n                                        Spitfire 480SL Glyphosate Herbicide"
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Pesticide")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱3,100.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱3,150.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("120")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱3,150.00")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("img", {
-                  attrs: {
-                    src:
-                      "https://ph-test-11.slatic.net/p/3/spitfire-480sl-glyphosate-herbicide-1-gallon-6763-52097958-7ae7c5b9af58605a6c4ff7439adb68dc-catalog_233.jpg",
-                    height: "45",
-                    width: "45",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", { attrs: { scope: "row" } }, [
-                _c("div", { staticClass: "checkbox" }, [
-                  _c("label", [_c("input", { attrs: { type: "checkbox" } })])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("td", [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-raised btn-sm",
-                    attrs: { type: "button" }
-                  },
-                  [
-                    _vm._v(
-                      "Edit\n                                            "
-                    ),
-                    _c("i", { staticClass: "fas fa-edit" })
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("1000")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Crop Giant")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Fertilizer")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱399.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱499.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("100")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱499.00")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("img", {
-                  attrs: {
-                    src:
-                      "https://ph-test-11.slatic.net/p/3/crop-giant-15-15-30-1kg-1730-96044411-28a9c792e2f2330f7cd9462f2748cfcb-catalog_233.jpg",
-                    height: "45",
-                    width: "45",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", { attrs: { scope: "row" } }, [
-                _c("div", { staticClass: "checkbox" }, [
-                  _c("label", [_c("input", { attrs: { type: "checkbox" } })])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("td", [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-raised btn-sm",
-                    attrs: { type: "button" }
-                  },
-                  [
-                    _vm._v(
-                      "Edit\n                                            "
-                    ),
-                    _c("i", { staticClass: "fas fa-edit" })
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("1001")]),
-              _vm._v(" "),
-              _c("td", [
-                _vm._v(
-                  "\n                                        Spitfire 480SL Glyphosate Herbicide"
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Pesticide")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱3,100.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱3,150.00")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("120")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("₱3,150.00")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("img", {
-                  attrs: {
-                    src:
-                      "https://ph-test-11.slatic.net/p/3/spitfire-480sl-glyphosate-herbicide-1-gallon-6763-52097958-7ae7c5b9af58605a6c4ff7439adb68dc-catalog_233.jpg",
-                    height: "45",
-                    width: "45",
-                    alt: ""
-                  }
-                })
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  }
-]
+                "v-card",
+                [
+                  _c("v-card-title", [
+                    _c("h1", { staticClass: "headline" }, [
+                      _vm._v("Item Details")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    [
+                      _c(
+                        "v-container",
+                        { attrs: { "grid-list-md": "" } },
+                        [
+                          _c(
+                            "v-layout",
+                            {
+                              attrs: { row: "", wrap: "", "justify-center": "" }
+                            },
+                            [
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: { solo: "", label: "Dessert name" },
+                                    model: {
+                                      value: _vm.customer.name,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.customer, "name", $$v)
+                                      },
+                                      expression: "customer.name"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: { solo: "", label: "Calories" },
+                                    model: {
+                                      value: _vm.customer.calories,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.customer, "calories", $$v)
+                                      },
+                                      expression: "customer.calories"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: { solo: "", label: "Fat (g)" },
+                                    model: {
+                                      value: _vm.customer.fat,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.customer, "fat", $$v)
+                                      },
+                                      expression: "customer.fat"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: { solo: "", label: "Carbs (g)" },
+                                    model: {
+                                      value: _vm.customer.carbs,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.customer, "carbs", $$v)
+                                      },
+                                      expression: "customer.carbs"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: { solo: "", label: "Protein (g)" },
+                                    model: {
+                                      value: _vm.customer.protein,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.customer, "protein", $$v)
+                                      },
+                                      expression: "customer.protein"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "" } },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    { attrs: { color: "success", block: "" } },
+                                    [
+                                      _vm._v(
+                                        "\n                                    Submit\n                                "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "" } },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { block: "" },
+                                      on: {
+                                        click: function($event) {
+                                          _vm.dialog = false
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                    Cancel\n                                "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -105883,6 +106092,8 @@ module.exports = function spread(callback) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_styles_index__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_customer_index__ = __webpack_require__(371);
+
 
 
 
@@ -105891,7 +106102,8 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
     modules: {
-        StylesModule: __WEBPACK_IMPORTED_MODULE_2__modules_styles_index__["a" /* default */]
+        StylesModule: __WEBPACK_IMPORTED_MODULE_2__modules_styles_index__["a" /* default */],
+        CustomersModule: __WEBPACK_IMPORTED_MODULE_3__modules_customer_index__["a" /* default */]
     }
 }));
 
@@ -106013,6 +106225,77 @@ var easeInOutQuint = exports.easeInOutQuint = function easeInOutQuint(t) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__state__ = __webpack_require__(372);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getters__ = __webpack_require__(373);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mutations__ = __webpack_require__(374);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__actions__ = __webpack_require__(375);
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+    namespaced: true,
+    state: __WEBPACK_IMPORTED_MODULE_0__state__["a" /* default */],
+    getters: __WEBPACK_IMPORTED_MODULE_1__getters__["a" /* default */],
+    mutations: __WEBPACK_IMPORTED_MODULE_2__mutations__["a" /* default */],
+    actions: __WEBPACK_IMPORTED_MODULE_3__actions__["a" /* default */]
+});
+
+/***/ }),
+/* 372 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    customers: [],
+    customer: {}
+});
+
+/***/ }),
+/* 373 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    getCustomers: function getCustomers(state) {
+        return state.cusomters;
+    },
+    getCustomer: function getCustomer(state) {
+        return state.customer;
+    }
+});
+
+/***/ }),
+/* 374 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    setCustomers: function setCustomers(state, payload) {
+        state.customers = payload;
+    },
+    setCustomer: function setCustomer(state, payload) {
+        state.customer = payload;
+    }
+});
+
+/***/ }),
+/* 375 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({});
 
 /***/ })
 /******/ ]);

@@ -1,291 +1,264 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header clearfix">
-                        <div class="form-inline float-left">
-                            <div class="form-group pt-0 mr-2">
-                                <input style="width:250px; margin-top: 0.4rem;" type="text" id="searchItemsField" class="form-control" placeholder="Search Items">
-                            </div>
-                            <div class="form-group pt-0 mr-2">
-                                <v-select v-model="selected" placeholder="Filter by Category" label="label" :options="options"></v-select>
-                            </div>
-
-                            <div class="form-group">
-                                <button class="btn btn-success btn-raised mb-0">
-                                    <i class="fas fa-search"></i>
-                                    Search
-                                </button>
-
-                            </div>
-                        </div>
-
-                        <div class="form-inline float-right">
-                            <div class="form-group mr-1">
-                                <a href="/admin/items/create" class="btn btn-primary btn-raised mb-0">
-                                    <i class="fas fa-plus-circle"></i> New Item
-                                </a>
-                            </div>
-                            <div class="form-group">
-
-                                <button type="button" class="btn btn-secondary btn-outline dropdown-toggle mb-0" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <span class="sr-only">Toggle Dropdown</span>
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </button>
-                                <div class="dropdown-menu" style="top">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Separated link</a>
-                                </div>
-
-                            </div>
-                        </div>
+    <v-container grid-list-md>
+        <v-layout row wrap>
+            <v-flex xs12>
+                <v-layout row wrap>
+                    <v-flex xs12 md4>
+                        <v-text-field
+                            solo
+                            label="Seach Items"
+                            prepend-icon="search"                            
+                        ></v-text-field>
+                    </v-flex>
+                    <v-flex xs12 md1>
+                        <v-btn block color="success" large class="ma-0">
+                            Search
+                        </v-btn>
+                    </v-flex>
+                    <v-spacer></v-spacer>
+                    <div class="pa-1">
+                        <v-btn @click="dialog = true" color="success" class="ma-0" large>
+                            New Item
+                        </v-btn>
+                        <v-menu offset-y>
+                            <v-btn slot="activator" class="ma-0" large>
+                                <v-icon>more_horiz</v-icon>
+                            </v-btn>
+                            <v-list>
+                                <v-list-tile href="">
+                                    <v-list-tile-title>Excel Import</v-list-tile-title>
+                                </v-list-tile>
+                                <v-list-tile href="">
+                                    <v-list-tile-title>Excel Export</v-list-tile-title>
+                                </v-list-tile>
+                            </v-list>
+                        </v-menu>
                     </div>
-                    <div class="card body">
-                        <div class="table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="check"></span>
-                                                </label>
-                                            </div>
-                                        </th>
-                                        <th scope="col" style="width:100px;">Action</th>
-                                        <th scope="col">Item Id</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Category</th>
-                                        <th>Cost Price</th>
-                                        <th>Selling Price</th>
-                                        <th>Quantity</th>
-                                        <th>Location Cost Price</th>
-                                        <th>Description</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td scope="row">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="check"></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-raised btn-sm">Edit
-                                                <i class="fas fa-edit"></i>
-                                            </button>
-                                        </td>
-                                        <td>1000</td>
-                                        <td>Crop Giant</td>
-                                        <td>Fertilizer</td>
-                                        <td>₱399.00</td>
-                                        <td>₱499.00</td>
-                                        <td>100</td>
-                                        <td>₱499.00</td>
-                                        <td>
-                                            <img src="https://ph-test-11.slatic.net/p/3/crop-giant-15-15-30-1kg-1730-96044411-28a9c792e2f2330f7cd9462f2748cfcb-catalog_233.jpg"
-                                                height="45" width="45" alt="">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td scope="row">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="check"></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-raised btn-sm">Edit
-                                                <i class="fas fa-edit"></i>
-                                            </button>
-                                        </td>
-                                        <td>1001</td>
-                                        <td>
-                                            Spitfire 480SL Glyphosate Herbicide</td>
-                                        <td>Pesticide</td>
-                                        <td>₱3,100.00</td>
-                                        <td>₱3,150.00</td>
-                                        <td>120</td>
-                                        <td>₱3,150.00</td>
-                                        <td>
-                                            <img src="https://ph-test-11.slatic.net/p/3/spitfire-480sl-glyphosate-herbicide-1-gallon-6763-52097958-7ae7c5b9af58605a6c4ff7439adb68dc-catalog_233.jpg"
-                                                height="45" width="45" alt="">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td scope="row">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox">
-                                                    <span class="check"></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-raised btn-sm">Edit
-                                                <i class="fas fa-edit"></i>
-                                            </button>
-                                        </td>
-                                        <td>1000</td>
-                                        <td>Crop Giant</td>
-                                        <td>Fertilizer</td>
-                                        <td>₱399.00</td>
-                                        <td>₱499.00</td>
-                                        <td>100</td>
-                                        <td>₱499.00</td>
-                                        <td>
-                                            <img src="https://ph-test-11.slatic.net/p/3/crop-giant-15-15-30-1kg-1730-96044411-28a9c792e2f2330f7cd9462f2748cfcb-catalog_233.jpg"
-                                                height="45" width="45" alt="">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td scope="row">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox">
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-raised btn-sm">Edit
-                                                <i class="fas fa-edit"></i>
-                                            </button>
-                                        </td>
-                                        <td>1001</td>
-                                        <td>
-                                            Spitfire 480SL Glyphosate Herbicide</td>
-                                        <td>Pesticide</td>
-                                        <td>₱3,100.00</td>
-                                        <td>₱3,150.00</td>
-                                        <td>120</td>
-                                        <td>₱3,150.00</td>
-                                        <td>
-                                            <img src="https://ph-test-11.slatic.net/p/3/spitfire-480sl-glyphosate-herbicide-1-gallon-6763-52097958-7ae7c5b9af58605a6c4ff7439adb68dc-catalog_233.jpg"
-                                                height="45" width="45" alt="">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td scope="row">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox">
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-raised btn-sm">Edit
-                                                <i class="fas fa-edit"></i>
-                                            </button>
-                                        </td>
-                                        <td>1000</td>
-                                        <td>Crop Giant</td>
-                                        <td>Fertilizer</td>
-                                        <td>₱399.00</td>
-                                        <td>₱499.00</td>
-                                        <td>100</td>
-                                        <td>₱499.00</td>
-                                        <td>
-                                            <img src="https://ph-test-11.slatic.net/p/3/crop-giant-15-15-30-1kg-1730-96044411-28a9c792e2f2330f7cd9462f2748cfcb-catalog_233.jpg"
-                                                height="45" width="45" alt="">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td scope="row">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox">
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-raised btn-sm">Edit
-                                                <i class="fas fa-edit"></i>
-                                            </button>
-                                        </td>
-                                        <td>1001</td>
-                                        <td>
-                                            Spitfire 480SL Glyphosate Herbicide</td>
-                                        <td>Pesticide</td>
-                                        <td>₱3,100.00</td>
-                                        <td>₱3,150.00</td>
-                                        <td>120</td>
-                                        <td>₱3,150.00</td>
-                                        <td>
-                                            <img src="https://ph-test-11.slatic.net/p/3/spitfire-480sl-glyphosate-herbicide-1-gallon-6763-52097958-7ae7c5b9af58605a6c4ff7439adb68dc-catalog_233.jpg"
-                                                height="45" width="45" alt="">
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <pagination></pagination>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </v-layout>
+            </v-flex>
+            <v-flex xs12>
+                <v-data-table
+                    :headers="headers"
+                    :items="desserts"
+                    :search="search"
+                    v-model="selected"
+                    item-key="name"
+                    select-all
+                    class="elevation-1"
+                    
+                >
+                    <template slot="headerCell" slot-scope="props">
+                    <v-tooltip bottom>
+                        <span slot="activator">
+                        {{ props.header.text }}
+                        </span>
+                        <span>
+                        {{ props.header.text }}
+                        </span>
+                    </v-tooltip>
+                    </template>
+                    <template slot="items" slot-scope="props">
+                    <td>
+                        <v-checkbox
+                        v-model="props.selected"
+                        primary
+                        hide-details
+                        ></v-checkbox>
+                    </td>
+                    <td>{{ props.item.name }}</td>
+                    <td class="text-xs-right">{{ props.item.calories }}</td>
+                    <td class="text-xs-right">{{ props.item.fat }}</td>
+                    <td class="text-xs-right">{{ props.item.carbs }}</td>
+                    <td class="text-xs-right">{{ props.item.protein }}</td>
+                    <td class="text-xs-right">{{ props.item.iron }}</td>
+                    <td class="justify-center layout px-0">
+                        <v-btn icon class="mx-0" @click="editItem(props.item)">
+                            <v-icon color="teal">edit</v-icon>
+                        </v-btn>
+                        <v-btn icon class="mx-0" @click="deleteItem(props.item)">
+                            <v-icon color="error">delete</v-icon>
+                        </v-btn>
+                    </td>
+                    </template>
+                </v-data-table>
+            </v-flex>
+        </v-layout>
+        <!-- modal -->
+        <v-layout row justify-center>
+            <v-dialog v-model="dialog" persistent max-width="500px">
+                <v-card>
+                    <v-card-title>
+                        <h1 class="headline">Item Details</h1>
+                    </v-card-title>
+                    <v-card-text>
+                       <v-container grid-list-md>
+                            <v-layout row wrap justify-center>
+                                <v-flex xs12>
+                                    <v-text-field solo v-model="customer.name" label="Dessert name"></v-text-field>
+                                </v-flex>
+                                <v-flex xs12>
+                                    <v-text-field solo v-model="customer.calories" label="Calories"></v-text-field>
+                                </v-flex>
+                                <v-flex xs12>
+                                    <v-text-field solo v-model="customer.fat" label="Fat (g)"></v-text-field>
+                                </v-flex>
+                                <v-flex xs12>
+                                    <v-text-field solo v-model="customer.carbs" label="Carbs (g)"></v-text-field>
+                                </v-flex>
+                                <v-flex xs12>
+                                    <v-text-field solo v-model="customer.protein" label="Protein (g)"></v-text-field>
+                                </v-flex>
+                                <v-flex xs6>
+                                    <v-btn
+                                        color="success"
+                                        block>
+                                        Submit
+                                    </v-btn>
+                                </v-flex>
+                                <v-flex xs6>
+                                    <v-btn
+                                        @click="dialog = false"
+                                        block>
+                                        Cancel
+                                    </v-btn>
+                                </v-flex>
+                            </v-layout>
+                        </v-container>
+                    </v-card-text>
+                </v-card>
+            </v-dialog>
+        </v-layout>
+    </v-container>
 </template>
-
 <script>
-    import Pagination from '../../../components/pagination';
-
+    import { mapGetters } from 'vuex'
     export default {
-        components: {
+    computed: {
+        ...mapGetters({
+            customer: 'CustomersModule/getCustomer'
+        })
+    },
+    data () {
+      return {
+        dialog: false,
+        search: '',
+        selected: [],
+        loading:false,
+        headers: [
+          {
+            text: 'Dessert (100g serving)',
+            align: 'left',
+            sortable: false,
+            value: 'name'
+          },
+          { text: 'Calories', value: 'calories' },
+          { text: 'Fat (g)', value: 'fat' },
+          { text: 'Carbs (g)', value: 'carbs' },
+          { text: 'Protein (g)', value: 'protein' },
+          { text: 'Iron (%)', value: 'iron' },
+          { text: 'Actions', value: 'action', sortable: false }
+        ],
+        desserts: [
+          {
+            value: false,
+            name: 'Frozen Yogurt',
+            calories: 159,
+            fat: 6.0,
+            carbs: 24,
+            protein: 4.0,
+            iron: '1%'
+          },
+          {
+            value: false,
+            name: 'Ice cream sandwich',
+            calories: 237,
+            fat: 9.0,
+            carbs: 37,
+            protein: 4.3,
+            iron: '1%'
+          },
+          {
+            value: false,
+            name: 'Eclair',
+            calories: 262,
+            fat: 16.0,
+            carbs: 23,
+            protein: 6.0,
+            iron: '7%'
+          },
+          {
+            value: false,
+            name: 'Cupcake',
+            calories: 305,
+            fat: 3.7,
+            carbs: 67,
+            protein: 4.3,
+            iron: '8%'
+          },
+          {
+            value: false,
+            name: 'Gingerbread',
+            calories: 356,
+            fat: 16.0,
+            carbs: 49,
+            protein: 3.9,
+            iron: '16%'
+          },
+          {
+            value: false,
+            name: 'Jelly bean',
+            calories: 375,
+            fat: 0.0,
+            carbs: 94,
+            protein: 0.0,
+            iron: '0%'
+          },
+          {
+            value: false,
+            name: 'Lollipop',
+            calories: 392,
+            fat: 0.2,
+            carbs: 98,
+            protein: 0,
+            iron: '2%'
+          },
+          {
+            value: false,
+            name: 'Honeycomb',
+            calories: 408,
+            fat: 3.2,
+            carbs: 87,
+            protein: 6.5,
+            iron: '45%'
+          },
+          {
+            value: false,
+            name: 'Donut',
+            calories: 452,
+            fat: 25.0,
+            carbs: 51,
+            protein: 4.9,
+            iron: '22%'
+          },
+          {
+            value: false,
+            name: 'KitKat',
+            calories: 518,
+            fat: 26.0,
+            carbs: 65,
+            protein: 7,
+            iron: '6%'
+          }
+        ]
+      }
+    },
+    methods: {
+        editItem(item) {
 
-            Pagination
         },
-        data() {
-            return {
-                selected: {
-                    label: 'All',
-                    value: null
-                },
-                options: [{
-                        label: 'All',
-                        value: null
-                    },
-                    {
-                        label: 'Item Id',
-                        value: 'item_id'
-                    },
-                    {
-                        label: 'Item Name',
-                        value: 'item_name'
-                    },
-                    {
-                        label: 'Quantity',
-                        value: 'quantity'
-                    },
+        deleteItem(item) {
 
-                ]
-            }
         }
     }
+  }
 </script>
-
-<style>
-    .v-select.searchable .dropdown-toggle {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-    }
-</style>
