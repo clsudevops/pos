@@ -1,3 +1,3 @@
 <footer class="bg-dark footer">
-    <p>2018 &copy; Point of Sale</p>
+    <p class="subheading" style="color:#fff;">2018 &copy; Point of Sale</p>
 </footer>
