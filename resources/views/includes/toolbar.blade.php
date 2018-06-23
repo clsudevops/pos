@@ -1,5 +1,7 @@
 <v-toolbar height="64px" fixed>
-    <v-toolbar-side-icon @click.native="toggleNavDrawer"></v-toolbar-side-icon>
+    @auth
+     <v-toolbar-side-icon @click.native="toggleNavDrawer"></v-toolbar-side-icon>
+    @endauth
     <img src="/images/favicon.png" heght="40" width="40" alt="POS" class="img-circle">
     <v-toolbar-title class="hidden-xs-only">
         Point of Sale
