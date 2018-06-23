@@ -9,10 +9,10 @@
     <title>{{ config('app.name', 'Point of Sale') }} - @yield('title')</title>
 
     <link rel="shortcut icon" href="/images/favicon.png" />
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> -->
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
@@ -23,10 +23,15 @@
 
 <body>
     <div id="app" class="wrapper">
-        @include('includes.navbar')
-        
-            @yield('content')
-        
+        <v-app>
+            @include('includes.toolbar')
+            @auth
+                <navigation-drawer></navigation-drawer>
+            @endauth
+            <div class="wrapper-fixed">
+                @yield('content')
+            </div>
+        </v-app>
     </div>
     <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
