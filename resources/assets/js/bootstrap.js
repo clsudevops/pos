@@ -43,6 +43,23 @@ Vue.component('employee-form', require('./components/admin/employees/employeeFor
 Vue.component('stores-data-table', require('./components/admin/stores/storesDataTable.vue'))
 Vue.component('store-form', require('./components/admin/stores/storeForm.vue'));
 
+/** Passport Components */
+Vue.component(
+    'passport-clients',
+    require('./components/passport/Clients.vue')
+);
+
+Vue.component(
+    'passport-authorized-clients',
+    require('./components/passport/AuthorizedClients.vue')
+);
+
+Vue.component(
+    'passport-personal-access-tokens',
+    require('./components/passport/PersonalAccessTokens.vue')
+);
+
+
 try {
     window.$ = window.jQuery = require('jquery');
 } catch (e) {}

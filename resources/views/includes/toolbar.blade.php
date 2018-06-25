@@ -4,15 +4,15 @@
     @endauth
     <img src="/images/favicon.png" heght="40" width="40" alt="POS" class="img-circle">
     <v-toolbar-title class="hidden-xs-only">
-        Point of Sale
+        <a href="{{ route('index') }}" style="color:rgba(0,0,0,.87);">Point of Sale</a>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
         @guest
-        <v-btn flat @click.native="scrollTo('#home', $event)">Home</v-btn>
-        <v-btn flat @click.native="scrollTo('#products', $event)">Products</v-btn>
-        <v-btn flat @click.native="scrollTo('#contact-us', $event)">Contact us</v-btn>
-        <v-btn href="{{ route('login') }}" flat>Login</v-btn>
+            <v-btn v-if="routePath == '/'" flat @click.native="scrollTo('#home', $event)">Home</v-btn>
+            <v-btn v-if="routePath == '/'" flat @click.native="scrollTo('#products', $event)">Products</v-btn>
+            <v-btn v-if="routePath == '/'" flat @click.native="scrollTo('#contact-us', $event)">Contact us</v-btn>
+            <v-btn v-if="routePath == '/'" href="{{ route('login') }}" flat>Login</v-btn>
         @else
         <v-menu offset-y>
             <v-btn slot="activator" flat>{{ Auth::user()->name }}</v-btn>

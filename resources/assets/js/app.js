@@ -8,6 +8,7 @@ const app = new Vue({
     el: '#app',
     store,
     data: {
+        routePath: window.location.pathname,
         active_hash: null,
         remember: false,
         windowWidth: document.documentElement.clientWidth
@@ -70,6 +71,7 @@ const app = new Vue({
         }
     },
     mounted () {
-        window.addEventListener('resize', this.handleResize)
+        window.addEventListener('resize', this.handleResize);
+        console.log(this.routePath)
     }
 });

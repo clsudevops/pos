@@ -279,7 +279,8 @@
     },
     methods: {
         editCustomer(item) {
-
+            this.dialog = true;
+            
         },
         deleteCustomer(item) {
 

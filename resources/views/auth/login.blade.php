@@ -16,14 +16,14 @@
                         <v-flex xs12>
                             <v-text-field
                                 prepend-icon="account_circle"
-                                class="{{ $errors->has('email') ? ' is-invalid' : '' }}"
+                                class="{{ $errors->has('email') ? ' error--text' : '' }}"
                                 solo
                                 name="email"
                                 label="Username or Email"
                                 value="{{ old('email') }}"
                             ></v-text-field>
                             @if ($errors->has('email'))
-                            <span class="invalid-feedback">
+                            <span class="error--text">
                                 <strong>{{ $errors->first('email') }}</strong>
                             </span>
                             @endif
@@ -32,12 +32,12 @@
                             <v-text-field 
                                 prepend-icon="vpn_key" 
                                 solo 
-                                class="{{ $errors->has('password') ? ' is-invalid' : '' }}"
+                                class="{{ $errors->has('password') ? ' error--text' : '' }}"
                                 name="password" 
                                 label="Password" 
                                 type="password"></v-text-field>
                             @if ($errors->has('password'))
-                                <span class="invalid-feedback">
+                                <span class="error--text">
                                     <strong>{{ $errors->first('password') }}</strong>
                                 </span>
                             @endif
