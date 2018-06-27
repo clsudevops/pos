@@ -14,13 +14,13 @@ class AdditionalFieldsToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('phonenumber', 50);
-            $table->text('userFile');
-            $table->date('hiredDate');
-            $table->string('address1', 150);
-            $table->string('address2', 150);
-            $table->string('city', 150);
-            $table->string('province', 150);
+            $table->string('phonenumber', 50)->nullable();
+            $table->text('userFile')->nullable();
+            $table->date('hiredDate')->nullable();
+            $table->string('address1', 150)->nullable();
+            $table->string('address2', 150)->nullable();
+            $table->string('city', 150)->nullable();
+            $table->string('province', 150)->nullable();
         });
     }
 
