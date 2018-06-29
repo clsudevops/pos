@@ -4,10 +4,12 @@ window._ = require('lodash');
 window.Popper = require('popper.js').default;
 import VueRouter from 'vue-router';
 import VSelect from 'vue-select';
+import VeeValidate from 'vee-validate'
 // import Vuetify from 'vuetify'
 // import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(VueRouter);
+Vue.use(VeeValidate);
 // Vue.use(Vuetify);
 /**
  * Adding Global Components

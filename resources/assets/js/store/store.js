@@ -9,6 +9,7 @@ import PriceRulesModule from './modules/price-rules/index'
 import SalesModule from './modules/sales/index'
 import SuppliersModule from './modules/supplier/index'
 import TransactionsModule from './modules/transaction/index'
+import ItemsModule from './modules/item/index'
 
 Vue.use(Vuex);
 
@@ -22,6 +23,7 @@ export default new Vuex.Store({
         PriceRulesModule, 
         SalesModule, 
         SuppliersModule, 
-        TransactionsModule
+        TransactionsModule,
+        ItemsModule
     }
 });

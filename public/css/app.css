@@ -298,3 +298,20 @@ button.bg-dark:focus {
   }
 }
 
+/**
+  Displaying errors for Solo type input
+*/
+
+.input-group__details {
+  display: block !important;
+  position: absolute;
+  top: 100%;
+}
+
+.input-group__details:before,
+.input-group__details:after {
+  display: none;
+}
+
+/**END*/
+

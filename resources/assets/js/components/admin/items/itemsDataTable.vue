@@ -88,42 +88,20 @@
             <v-dialog v-model="dialog" persistent max-width="500px">
                 <v-card>
                     <v-card-title>
-                        <h1 class="headline">Item Details</h1>
+                        <!-- <div style="display: flex;"> -->
+                            <h1 class="headline">Item Details</h1>
+                            <v-spacer></v-spacer>
+                            <v-btn
+                                small
+                                @click="dialog = false"
+                                flat
+                                color="error">
+                                Close
+                            </v-btn>
+                        <!-- </div> -->
                     </v-card-title>
                     <v-card-text>
-                       <v-container grid-list-md>
-                            <v-layout row wrap justify-center>
-                                <v-flex xs12>
-                                    <v-text-field solo v-model="customer.name" label="Dessert name"></v-text-field>
-                                </v-flex>
-                                <v-flex xs12>
-                                    <v-text-field solo v-model="customer.calories" label="Calories"></v-text-field>
-                                </v-flex>
-                                <v-flex xs12>
-                                    <v-text-field solo v-model="customer.fat" label="Fat (g)"></v-text-field>
-                                </v-flex>
-                                <v-flex xs12>
-                                    <v-text-field solo v-model="customer.carbs" label="Carbs (g)"></v-text-field>
-                                </v-flex>
-                                <v-flex xs12>
-                                    <v-text-field solo v-model="customer.protein" label="Protein (g)"></v-text-field>
-                                </v-flex>
-                                <v-flex xs6>
-                                    <v-btn
-                                        color="success"
-                                        block>
-                                        Submit
-                                    </v-btn>
-                                </v-flex>
-                                <v-flex xs6>
-                                    <v-btn
-                                        @click="dialog = false"
-                                        block>
-                                        Cancel
-                                    </v-btn>
-                                </v-flex>
-                            </v-layout>
-                        </v-container>
+                       <ItemForm/>
                     </v-card-text>
                 </v-card>
             </v-dialog>
@@ -132,7 +110,11 @@
 </template>
 <script>
     import { mapGetters } from 'vuex'
+    import ItemForm from './itemForm'
     export default {
+    components: {
+        ItemForm
+    },
     computed: {
         ...mapGetters({
             customer: 'CustomersModule/getCustomer'
