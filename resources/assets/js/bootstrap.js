@@ -2,6 +2,8 @@ window.Vue = require('vue');
 window.Vuetify = require('vuetify');
 window._ = require('lodash');
 window.Popper = require('popper.js').default;
+window.Cookies = require('js-cookie');
+
 import VueRouter from 'vue-router';
 import VSelect from 'vue-select';
 import VeeValidate from 'vee-validate'
@@ -14,6 +16,8 @@ Vue.use(VeeValidate);
 /**
  * Adding Global Components
  */
+Vue.component('login', require('./components/auth/login'));
+
 Vue.component('jumbotron', require('./components/home/jumbotron'));
 Vue.component('featured-products', require('./components/home/products'));
 Vue.component('contact-us', require('./components/home/contact-us'));
@@ -75,6 +79,7 @@ try {
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.baseURL = window.location.protocol + "//" + window.location.host;
 
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
