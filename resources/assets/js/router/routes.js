@@ -7,44 +7,44 @@ import expensesChildrenRoutes from './children/expensesChildrenRoutes';
 let routes = [
     {
         path:'/dashboard',
-        component: require('../pages/admin/home/dashboard')
+        component: require('../pages/admin/dashboard')
     },
     {
         path: '/customers',
-        component: require('../pages/admin/home/customers')
+        component: require('../pages/admin/customers')
     },
     {
         path: '/items',
-        component: require('../pages/admin/home/items')
+        component: require('../pages/admin/items')
     },
     {
         path: '/transactions',
-        component: require('../pages/admin/home/transactions')
+        component: require('../pages/admin/transactions')
     },
     {
         path: '/price-rules',
-        component: require('../pages/admin/home/priceRules')
+        component: require('../pages/admin/priceRules')
     },
     {
         path: '/suppliers',
-        component: require('../pages/admin/home/suppliers'),
+        component: require('../pages/admin/suppliers'),
         children: supplierChildrenRoutes
     },
     {
         path: '/employees',
-        component: require('../pages/admin/home/employees'),
+        component: require('../pages/admin/employees'),
         children: employeeChildrenRoutes
     },
     {
         path: '/expenses',
-        component: require('../pages/admin/home/expenses'),
+        component: require('../pages/admin/expenses'),
         children: expensesChildrenRoutes
     }
 ];
 
 export default new VueRouter({
     routes,
-    mode:'hash',
+    mode:'history',
     linkExactActiveClass: 'active',
     linkActiveClass: 'active',
 });

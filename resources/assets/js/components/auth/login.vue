@@ -56,7 +56,8 @@
             </v-flex> -->
             <v-flex xs12>
                 <v-btn type="submit" color="primary" block>
-                    Sign in
+                    <span v-if="!loading">Sign in</span>
+                    <span v-else :disabled="loading ? true: false"><div class="loader"></div></span>
                 </v-btn>
             </v-flex>
         </v-form>
@@ -69,7 +70,8 @@
             remember_me: false,
             username: '',
             password:'',
-            error_msg: ''
+            error_msg: '',
+            loading: false
         }),
         methods: {
             submit(scope) {
@@ -84,12 +86,15 @@
                             // scope:''
                         };
 
+                        this.loading = true;
+
                         return new Promise((resolve, reject) => {
                             axios.post('/login', body)
                             .then(response => {
                                 console.log(response)
                                 let data = response.data;
                                 window.location = response.data.redirect_uri;
+                                this.loading = false;
                                 // Cookies.set('_pos.token', `${data.token_type} ${data.token}`, {
                                 //     expires: data.expires_in,
                                 //     domain: window.location.hostname
@@ -104,6 +109,7 @@
                             .catch(err => {
                                 console.log(err)
                                 this.error_msg = err.response.data.message;
+                                this.loading = false;
                             })
                         }); 
                     }

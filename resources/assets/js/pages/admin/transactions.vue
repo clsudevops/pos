@@ -58,8 +58,8 @@
 </template>
 
 <script>
-    import TransactionsDataTable from '../../../components/admin/dashboard/transactionsDataTable';
-    import Pagination from '../../../components/pagination';
+    import TransactionsDataTable from '../../components/admin/transactions/transactionsDataTable';
+    import Pagination from '../../components/pagination';
 
     export default {
         components: {

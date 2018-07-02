@@ -5,7 +5,8 @@
 @section('content')
     <div class="main-content">
         <div class="container-fluid">
-            <dashboard></dashboard>
+            <!-- <dashboard></dashboard> -->
+            <router-view></router-view>
         </div>
     </div> 
 @endsection

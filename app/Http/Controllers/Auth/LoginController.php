@@ -61,7 +61,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) 
         {
-            return response()->json(['status' => true,'redirect_uri' => env('APP_URL') . '/admin/home'], 200);
+            return response()->json(['status' => true,'redirect_uri' => env('APP_URL') . '/dashboard'], 200);
         }
         else {
             return response()->json(

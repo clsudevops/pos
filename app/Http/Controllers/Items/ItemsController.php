@@ -25,7 +25,7 @@ class ItemsController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.items.create');
     }
 
     /**

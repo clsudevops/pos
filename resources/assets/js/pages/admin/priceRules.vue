@@ -58,8 +58,8 @@
 </template>
 
 <script>
-    import PriceRulesDataTable from '../../../components/admin/dashboard/priceRulesDataTable';
-    import Pagination from '../../../components/pagination';
+    import PriceRulesDataTable from '../../components/admin/prices/priceRulesDataTable';
+    import Pagination from '../../components/pagination';
 
     export default {
         components: {

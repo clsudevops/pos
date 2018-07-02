@@ -6,20 +6,10 @@
         fixed 
         dark
         app>
-        <!-- <v-toolbar flat>
-            <v-list class="pa-0">
-                <v-list-tile avatar>
-                    <v-list-tile-avatar>
-                        <img src="https://randomuser.me/api/portraits/men/85.jpg">
-                    </v-list-tile-avatar>
-                    <v-list-tile-content>
-                        <v-list-tile-title>John Leider</v-list-tile-title>
-                    </v-list-tile-content>
-                </v-list-tile>
-            </v-list>
-        </v-toolbar> -->
+    
         <v-list>
-            <v-list-tile v-for="(item, i) in items" :key="i" :href="item.link">
+            <!-- <v-list-tile v-for="(item, i) in items" :key="i" :href="item.link">  for laravel routing-->
+            <v-list-tile v-for="(item, i) in items" :key="i" :to="item.link">
                 <v-list-tile-action>
                     <v-icon small>{{ item.icon }}</v-icon>
                 </v-list-tile-action>
@@ -59,67 +49,67 @@
             items: [
                 {
                     text: 'Dashboard',
-                    link: '/admin/dashboard',
+                    link: '/dashboard',
                     icon: 'fas fa-tachometer-alt'
                 },
                 {
                     text: 'Customers',
-                    link: '/admin/customers',
+                    link: '/customers',
                     icon: 'fas fa-users'
                 },
                 {
                     text: 'Items',
-                    link: '/admin/items',
+                    link: '/items',
                     icon: 'fas fa-cube'
                 },
                 {
                     text: 'Suppliers',
-                    link: '/admin/suppliers',
+                    link: '/suppliers',
                     icon: 'fas fa-dolly-flatbed'
                 },
                 {
                     text: 'Transactions',
-                    link: '/admin/transactions',
+                    link: '/transactions',
                     icon: 'ion ion-clipboard'
                 },
                 {
                     text: 'Price rules',
-                    link: '/admin/price-rules',
+                    link: '/price-rules',
                     icon: 'fas fa-tags'
                 },
                 {
                     text: 'Reports',
-                    link: '/admin/reports',
+                    link: '/reports',
                     icon: 'fas fa-chart-line'
                 },
                 {
                     text: 'Sales',
-                    link: '/admin/sales',
+                    link: '/sales',
                     icon: 'fas fa-hand-holding-usd'
                 },
                 {
                     text: 'Expenses',
-                    link: '/admin/expenses',
+                    link: '/expenses',
                     icon: 'fas fa-dollar-sign'
                 },
                 {
                     text: 'Employees',
-                    link: '/admin/employees',
+                    link: '/employees',
                     icon: 'fas fa-users'
                 },
                 {
                     text: 'Store configuration',
-                    link: '/admin/store',
+                    link: '/store',
                     icon: 'fas fa-cogs'
                 },
                 {
                     text: 'Locations',
-                    link: '/admin/locations',
+                    link: '/locations',
                     icon: 'fas fa-map-marker-alt'
                 },
                 {
                     text: 'Gift Cards',
-                    link: '/admin/gift-cards',
+                    link: '/gift-cards',
                     icon: 'fas fa-gift'
                 },
             ],

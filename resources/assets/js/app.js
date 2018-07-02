@@ -1,12 +1,14 @@
 require('./bootstrap');
 
 import store from './store/store';
+import router from './router/routes';
 import * as easings from 'vuetify/es5/util/easing-patterns'
 import { mapGetters } from 'vuex';
 
 const app = new Vue({
     el: '#app',
     store,
+    router,
     data: {
         routePath: window.location.pathname,
         active_hash: null,
